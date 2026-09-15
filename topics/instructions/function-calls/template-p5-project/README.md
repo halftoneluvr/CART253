@@ -1,8 +1,8 @@
 # TITLE OF PROJECT
 
-OWEN DOBSON
+AUTHOR NAME
 
-[View this project online](halftoneluvr)
+[View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
 ## Description
 
