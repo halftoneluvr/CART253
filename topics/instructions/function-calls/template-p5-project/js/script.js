@@ -14,6 +14,6 @@ function setup() {
 
 function draw() {
     // Every frame
-    background(255, 100, 100);
-    rect(200, 80, 240, 320);
+    background(255, 240, 255);
+    ellipse(200, 280, 240, 320);
 }
