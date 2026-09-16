@@ -1,6 +1,6 @@
 /**
  * My House
- * Pippin Barr
+ * Owen Dobson
  * 
  * Draws a house with shapes.
  * 
@@ -25,7 +25,13 @@ function draw() {
     // The sky
     background(150, 200, 250);
 
-    // A cloud
+    drawCloud();
+    drawGround();
+    drawHouse();
+
+}
+
+function drawCloud() {
     push();
     noStroke();
     // Note: using a single number for a colour will be greyscale
@@ -38,13 +44,17 @@ function draw() {
     ellipse(190, 130, 60, 60);
     ellipse(220, 120, 60, 60);
     pop();
+}
 
-    // The ground
+function drawGround() {
     push();
     noStroke();
     fill(200);
     rect(0, 400, 640, 480);
     pop();
+}
+
+function drawHouse() {
 
     // The main body of the house
     push();
