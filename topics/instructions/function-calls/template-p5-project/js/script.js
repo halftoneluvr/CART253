@@ -1,24 +1,19 @@
 /**
- * Title of Project
- * Author Name
+ * Function Calls 
+ * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Working on the function calls example.
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
 function setup() {
-
+    // Once at the begining of every setup.
+    createCanvas(640, 480);
 }
 
-
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
 function draw() {
-
+    // Every frame
+    background(255, 100, 100);
+    rect(200, 80, 240, 320);
 }
