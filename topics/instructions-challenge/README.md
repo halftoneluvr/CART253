@@ -1,6 +1,6 @@
-# TITLE OF PROJECT
+# Instructions Challenge
 
-AUTHOR NAME
+Owen Dobson
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
