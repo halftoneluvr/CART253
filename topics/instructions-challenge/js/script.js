@@ -22,7 +22,7 @@ function draw() {
     background(177, 245, 252);
     
     // Base of neon Grass
-    fill(194, 255, 5);
+    fill(194, 240, 5);
     noStroke();
     rect(0, 180, 1080, 566);
 
@@ -39,15 +39,45 @@ function draw() {
     triangle(360, 180, 366, 170, 370, 171);
 
     // Third More Leaf
-
+    fill(190, 214, 92);
+    triangle(540, 180, 532, 145, 528, 160);
+    fill(160, 189, 90);
+    triangle(540, 180, 555, 156, 561, 169);
+    fill(170, 200, 87);
+    triangle(540, 180, 538, 160, 543, 164);
+    fill(237, 116, 200);
+    ellipse(538, 160, 3)
 
     // Fourth Colour on Bud
-
+     fill(190, 214, 92);
+    triangle(720, 180, 713, 135, 708, 148);
+    fill(160, 189, 90);
+    triangle(720, 180, 733, 140, 741, 151);
+    fill(170, 200, 87);
+    triangle(720, 180, 718, 150, 722, 144);
+    fill(237, 116, 200);
+    ellipse(722, 144, 8)
 
     // Fifth Basically a Flower 
-
-
-    // Sixth Bloom 
+    fill(190, 214, 92);
+    triangle(900, 180, 887, 120, 880, 138);
+    fill(200, 234, 110);
+    triangle(870, 164, 887, 120, 885, 144);
+    fill(160, 189, 90);
+    triangle(900, 180, 910, 118, 918, 136);
+    fill(160, 189, 90);
+    triangle(900, 180, 910, 118, 918, 136);
+    fill(178, 220, 98);
+    triangle(933, 164, 910, 118, 913, 138);
+    fill(170, 200, 70);
+    triangle(900, 180, 904, 118, 898, 100);
+    fill(219, 81, 170);
+    ellipse(894, 104, 7)
+    fill(235, 101, 187);
+    ellipse(903, 105, 7)
+    fill(237, 116, 200);
+    ellipse(898, 100, 10)
+ 
 
 
 }
