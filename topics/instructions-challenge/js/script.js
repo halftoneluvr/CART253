@@ -2,22 +2,15 @@
  * Instructions Challenge
  * Owen Dobson
  * 
- * Objective: Draw a Landscape 
+ * Flower Development... it grows! 
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
 function setup() {
     createCanvas(1080, 200);
 }
 
-
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
 function draw() {
     background(177, 245, 252);
     
@@ -26,30 +19,42 @@ function draw() {
     noStroke();
     rect(0, 180, 1080, 566);
 
-    // First Breakout
+    // Sequence of Flowers
+    firstFlow();
+    secondFlow();
+    thridFlow();
+    fourthFlow();
+    fifthFlow();
+
+}
+
+function firstFlow(){
     fill(179, 200, 99);
     triangle(180, 180, 173, 175, 178, 170);
     fill(156, 196, 90);
     triangle(180, 180, 183, 178, 184, 170);
+}
 
-    // Second Leaf 
+function secondFlow(){
     fill(181, 205, 96);
     triangle(360, 180, 357, 160, 350, 166);
     fill(157, 186, 92);
     triangle(360, 180, 366, 170, 370, 171);
+}
 
-    // Third More Leaf
+function thridFlow(){
     fill(190, 214, 92);
     triangle(540, 180, 532, 145, 528, 160);
     fill(160, 189, 90);
     triangle(540, 180, 555, 156, 561, 169);
     fill(170, 200, 87);
-    triangle(540, 180, 538, 160, 543, 164);
+    triangle(540, 180, 538, 160, 541, 164);
     fill(237, 116, 200);
     ellipse(538, 160, 3)
+}
 
-    // Fourth Colour on Bud
-     fill(190, 214, 92);
+function fourthFlow(){
+    fill(190, 214, 92);
     triangle(720, 180, 713, 135, 708, 148);
     fill(160, 189, 90);
     triangle(720, 180, 733, 140, 741, 151);
@@ -57,8 +62,9 @@ function draw() {
     triangle(720, 180, 718, 150, 722, 144);
     fill(237, 116, 200);
     ellipse(722, 144, 8)
+}
 
-    // Fifth Basically a Flower 
+function fifthFlow(){
     fill(190, 214, 92);
     triangle(900, 180, 887, 120, 880, 138);
     fill(200, 234, 110);
@@ -77,7 +83,4 @@ function draw() {
     ellipse(903, 105, 7)
     fill(237, 116, 200);
     ellipse(898, 100, 10)
- 
-
-
 }
