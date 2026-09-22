@@ -13,15 +13,15 @@
  * Creates canvas for drawing w/ gradient from blue to green 
 */
 function setup() {
-  createCanvas(223, 223);
+  createCanvas(224, 224);
   angleMode(DEGREES);
 
   // Use HSB color with values in the range 0-100.
   colorMode(HSB, 100);
 
-  for (let x = 0; x < 223; x += 1) {
-    for (let y = 0; y < 223; y += 1) {
-      let hueValue = map(x, 0, 223, 67, 33);
+  for (let x = 0; x < 224; x += 1) {
+    for (let y = 0; y < 224; y += 1) {
+      let hueValue = map(x, 0, 224, 67, 33);
       stroke(hueValue, 100, 100);
       point(x, y);
     }
@@ -76,12 +76,18 @@ function drawPattern() {
     line(35, 10, 35, 25);
     line(35, 25, 22, 25);
     line(22, 25, 22, 18);
+    line(22, 10, 22, 7);
 
     //internal linework
     line(35, 60, 35, 130);
+    line(45, 55, 45, 130);
+    line(98, 18, 80, 18);
 
+    //circles
+    noFill();
+    ellipse(112, 18, 20);
 
-    //arc
+    //arc1
     push();
     stroke('white');
     strokeWeight(4);
@@ -89,6 +95,16 @@ function drawPattern() {
     noFill();
     ellipseMode(RADIUS);
     arc(10, 60, 25, 25, 270, 360, OPEN);
+    pop();
+
+    //arc2
+    push();
+    stroke('white');
+    strokeWeight(4);
+    strokeCap(PROJECT);
+    noFill();
+    ellipseMode(RADIUS);
+    arc(80, 53, 35, 35, 180, 270, OPEN);
     pop();
 
 }
