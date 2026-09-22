@@ -14,6 +14,7 @@
 */
 function setup() {
   createCanvas(223, 223);
+  angleMode(DEGREES);
 
   // Use HSB color with values in the range 0-100.
   colorMode(HSB, 100);
@@ -69,9 +70,25 @@ function drawPattern() {
     strokeWeight(4);
     strokeCap(PROJECT);
 
+    //spiral
     line(10, 10, 10, 35);
     line(10, 10, 35, 10);
     line(35, 10, 35, 25);
     line(35, 25, 22, 25);
     line(22, 25, 22, 18);
+
+    //internal linework
+    line(35, 60, 35, 130);
+
+
+    //arc
+    push();
+    stroke('white');
+    strokeWeight(4);
+    strokeCap(PROJECT);
+    noFill();
+    ellipseMode(RADIUS);
+    arc(10, 60, 25, 25, 270, 360, OPEN);
+    pop();
+
 }
