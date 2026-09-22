@@ -2,14 +2,15 @@
  * Prototyping Assignemnt Drawing 2
  * Owen Dobson 
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Effectively a pagan-esque Polish inspired design 
+ * over a very saturated gradient of blue to green w/ 
+ * a cheeky cyan center.
  */
 
 "use strict";
 
 /**
- * Creates canvas for drawing
+ * Creates canvas for drawing w/ gradient from blue to green 
 */
 function setup() {
   createCanvas(223, 223);
@@ -24,14 +25,53 @@ function setup() {
       point(x, y);
     }
   }
-
 }
 
-
-
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Drawing on Pagan-esque design in white 
 */
 function draw() {
 
+    // Top-Left
+    push();
+    drawPattern();
+    pop();
+
+    // Top-Right
+    push();
+    translate(width, 0);
+    scale(-1, 1);
+    drawPattern();
+    pop();
+
+    // Bottom-Left
+    push();
+    translate(0, height);
+    scale(1, -1);
+    drawPattern();
+    pop();
+
+    // Bottom-Right
+    push();
+    translate(width, height);
+    scale(-1, -1);
+    drawPattern();
+    pop();
+
+    noLoop();
+}
+
+// defining functions
+function drawPattern() {
+    
+    //Line Convention
+    stroke('white');
+    strokeWeight(4);
+    strokeCap(PROJECT);
+
+    line(10, 10, 10, 35);
+    line(10, 10, 35, 10);
+    line(35, 10, 35, 25);
+    line(35, 25, 22, 25);
+    line(22, 25, 22, 18);
 }
