@@ -29,7 +29,7 @@ function setup() {
 }
 
 /**
- * Drawing on Pagan-esque design in white 
+ * Drawing on Pagan-esque design in white. Includes a mirrored effect!
 */
 function draw() {
 
@@ -82,16 +82,28 @@ function drawPattern() {
     line(35, 60, 35, 130);
     line(45, 55, 45, 130);
     line(98, 18, 80, 18);
+    line(20, 112, 23, 112);
+    line(32, 112, 35, 112);
+    line(45, 112, 48, 112);
+    line(112, 28, 112, 31);
+
+    //centerpiece
+    line(91, 112, 94, 112);
+    line(112, 91, 112, 65);
+    push();
+    noFill();
+    ellipseMode(RADIUS);
+    arc(108, 65, 10, 10, 90, 180, OPEN);
+    pop();
 
     //circles
     noFill();
     ellipse(112, 18, 20);
+    ellipse(15, 112, 10);
+    ellipse(112, 112, 35);
 
     //arc1
     push();
-    stroke('white');
-    strokeWeight(4);
-    strokeCap(PROJECT);
     noFill();
     ellipseMode(RADIUS);
     arc(10, 60, 25, 25, 270, 360, OPEN);
