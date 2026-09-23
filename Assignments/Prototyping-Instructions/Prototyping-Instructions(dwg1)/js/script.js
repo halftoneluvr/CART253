@@ -2,9 +2,7 @@
  * Prototyping Assignment 1
  * Owen Dobson
  * 
- * Attempting a representational piece, drawing some branzino. 
- * Going to think about colour and little details found in the 
- * shapes available in the p5.js library. 
+ * Attempting to create a sort of weaving effect or tartan. 
  */
 
 "use strict";
@@ -17,81 +15,96 @@ function setup() {
 }
 
 /**
- * I'm drawing some branzino (yes, the fish!) on a plate w/ its accoutrement
+ * Doing the weaving... use the brights and playing w/ transparency 
 */
 function draw() {
-    background(163, 212, 227);
+    background('white');
+
+    drawGreen();
     
-    tableCloth();
+    drawVermillion();
 
-    drawPlate();
+    drawBlue();
 
-    drawFish();
+    drawPink();
+
+    drawChartreuse();
 }
 
-function tableCloth(){
-    fill(173, 222, 240);
-    noStroke();
-    rect(25, 0, 20, 225);
-    rect(50, 0, 5, 225);
-    fill(178, 228, 247);
-    noStroke();
-    rect(0, 25, 225, 10);
-    rect(0, 10, 225, 5);
-}
-
-function drawFish(){
-   
-    // base of the body - shape
-    fill(150);
-    noStroke();
-    ellipse(113, 110, 75, 40);
-    triangle(113, 90, 37, 110, 75, 110);  
-    triangle(37, 110, 50, 100, 90, 113);
-    triangle(113, 110, 50, 100, 90, 95);
-    triangle(37, 110, 50, 100, 90, 113);
-    triangle(113, 90, 50, 100, 75, 93);
-    triangle(113, 92, 153, 100, 150, 93);
-
-    //bottom front
-    triangle(39, 114, 45, 108, 100, 128);
-    triangle(45, 114, 45, 108, 100, 120);
-
-    //tail
-    fill(150);
-    noStroke();
-    triangle(190, 103, 170, 111, 175, 102);
-    rect(113, 105, 65, 8);
-    triangle(175, 105, 118, 90, 130, 110);
-    triangle(170, 110, 145, 110, 175, 102);
-    triangle(192, 113, 170, 114, 175, 102);
-    triangle(118, 130, 178, 112, 113, 113);
-
+function drawPink(){
     push();
-    fill(207, 207, 198);
+    fill(255, 0, 110, 150);
     noStroke();
-    ellipse(52, 105, 3);
-    fill(242, 242, 233);
-    noStroke();
-    ellipse(52, 105, 2);
-    pop();
+    rect(175, 0, 15, 225);
+    rect(155, 0, 15, 225);
+    rect(0, 175, 225, 15);
+    rect(0, 155, 225, 15);
 
+    rect(0, 9, 225, 15);
+    rect(0, 0, 225, 4);
+    pop();
 }
 
-function drawPlate(){
-    fill(150);
+function drawBlue(){
+    push();
+    fill(156, 219, 255, 150);
     noStroke();
-    ellipse(15, 113, 20);
-    ellipse(210, 113, 20);
-    ellipse(113, 175, 20);
-    ellipse(113, 50, 20);
-    
-    ellipse(123, 175, 12);
-    ellipse(103, 50, 12);
-    ellipse(123, 50, 12);
-    ellipse(103, 175, 12);
-    
-    ellipse(113, 113, 200, 120);
-    fill(170);
-    ellipse(113, 113, 190, 110);
+     rect(190, 0, 5, 225);
+    rect(150, 0, 5, 225);
+    rect(0, 190, 225, 5);
+    rect(0, 150, 225, 5);
+
+    rect(0, 24, 225, 5);
+    pop();
+}
+
+function drawGreen(){
+    push();
+    fill(71, 92, 31, 150);
+    noStroke();
+    rect(195, 0, 20, 225);
+    rect(130, 0, 20, 225);
+    rect(0, 195, 225, 20);
+    rect(0, 130, 225, 20);
+
+    rect(0, 0, 20, 225);
+
+    rect(117, 0, 3, 225);
+    rect(29, 0, 3, 225);
+
+    rect(0, 29, 225, 20);
+    pop();
+}
+
+function drawVermillion(){
+    push();
+    fill(255, 38, 5, 150);
+    noStroke();
+    rect(0, 82, 225, 20);
+    rect(57, 0, 35, 225);
+    pop();
+}
+
+function drawChartreuse(){
+    push();
+    fill(213, 255, 5, 150);
+    noStroke();
+    rect(209, 0, 3, 225);
+    rect(133, 0, 3, 225);
+    rect(0, 198, 225, 3);
+    rect(0, 133, 225, 3);
+
+    rect(14, 0, 3, 225);
+
+    rect(0, 32, 225, 3);
+
+    fill(213, 255, 5, 50);
+    noStroke();
+    rect(0, 52, 225, 30);
+    rect(92, 0, 25, 225);
+    rect(32, 0, 25, 225)
+
+    rect(0, 218, 225, 25);
+    rect(0, 102, 225, 25);
+    pop();
 }
