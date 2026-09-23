@@ -1,6 +1,6 @@
-# Prototyping Assignment Drawing 3 
+# TITLE OF PROJECT
 
-Owen Dobson 
+AUTHOR NAME
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
@@ -10,9 +10,11 @@ This description should help the reader understand what the program is, anything
 
 ## Attribution
 
+This bit should attribute any code, assets or other elements used taken from other sources. For example:
+
 > - This project uses [p5.js](https://p5js.org).
-> - Pixel manipulation and gradient inversion technique (loadPixels/updatePixels 
-  blending with lerp) developed with assistance from Claude (Anthropic), 2026.
+> - The clown image is a capture of the clown from the Apple emoji character set.
+> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
 
 ## License
 

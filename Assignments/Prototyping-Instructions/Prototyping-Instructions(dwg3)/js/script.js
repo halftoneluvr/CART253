@@ -39,6 +39,7 @@ function draw() {
     noStroke();
     ellipse(200,25, 85);
     
+    //Pre-fab gradient inversion code (generated using Claude by Anthropic)
     loadPixels();
      for (let y = 0; y < height; y++) {
         let amount = map(y, 0, height, 0, 1);
@@ -50,5 +51,8 @@ function draw() {
         }
   }
   updatePixels();
+
+  //
+
 
 }

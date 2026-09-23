@@ -17,22 +17,29 @@ function setup() {
 }
 
 /**
- * Doing the weaving... use the brights and playing w/ transparency 
+ * Drawing the elements for the  weaving effect.
+ * Uses the brights and playing w/ transparency.
 */
 function draw() {
     background('white');
 
+    //Draws the Green elements 
     drawGreen();
     
+    //Draws the Vermillion elements 
     drawVermillion();
 
+    //Draws the Blue elements
     drawBlue();
 
+    //Draws the Pink elements
     drawPink();
 
+    //draws the Chartreuse elements
     drawChartreuse();
 }
 
+// Includes all of the Pink drawn elements 
 function drawPink(){
     push();
     fill(255, 0, 110, 150);
@@ -47,6 +54,7 @@ function drawPink(){
     pop();
 }
 
+// Includes all of the Blue drawn elements 
 function drawBlue(){
     push();
     fill(156, 219, 255, 150);
@@ -60,7 +68,9 @@ function drawBlue(){
     pop();
 }
 
+// Includes all of the Green drawn elements 
 function drawGreen(){
+    // Initial section
     push();
     fill(71, 92, 31, 150);
     noStroke();
@@ -69,6 +79,7 @@ function drawGreen(){
     rect(0, 195, 225, 20);
     rect(0, 130, 225, 20);
 
+    // Built upon and filled in blank space 
     rect(0, 0, 20, 225);
 
     rect(117, 0, 3, 225);
@@ -78,6 +89,7 @@ function drawGreen(){
     pop();
 }
 
+// Draws Vermillion elements 
 function drawVermillion(){
     push();
     fill(255, 38, 5, 150);
@@ -87,6 +99,7 @@ function drawVermillion(){
     pop();
 }
 
+// Draws all of the chartreuse elements 
 function drawChartreuse(){
     push();
     fill(213, 255, 5, 150);
