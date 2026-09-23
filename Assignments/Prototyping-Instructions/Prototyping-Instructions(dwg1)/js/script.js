@@ -20,11 +20,24 @@ function setup() {
  * I'm drawing some branzino (yes, the fish!) on a plate w/ its accoutrement
 */
 function draw() {
-    background(191, 213, 222);
+    background(163, 212, 227);
+    
+    tableCloth();
 
     drawPlate();
 
     drawFish();
+}
+
+function tableCloth(){
+    fill(173, 222, 240);
+    noStroke();
+    rect(25, 0, 20, 225);
+    rect(50, 0, 5, 225);
+    fill(178, 228, 247);
+    noStroke();
+    rect(0, 25, 225, 10);
+    rect(0, 10, 225, 5);
 }
 
 function drawFish(){
