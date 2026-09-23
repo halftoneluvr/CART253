@@ -2,8 +2,9 @@
  * Prototyping Assignment 1
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Attempting a representational piece, drawing some branzino. 
+ * Going to think about colour and little details found in the 
+ * shapes available in the p5.js library. 
  */
 
 "use strict";
@@ -15,14 +16,34 @@ function setup() {
     createCanvas(225, 225);
 }
 
-
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * I'm drawing some branzino (yes, the fish!) on a plate w/ its accoutrement
 */
 function draw() {
     background(191, 213, 222);
 
     drawPlate();
+
+    drawFish();
+}
+
+function drawFish(){
+   
+    // base of the body - shape
+    fill(150);
+    noStroke();
+    ellipse(113, 110, 75, 40);
+    triangle(113, 90, 37, 110, 75, 110);  
+    triangle(37, 110, 50, 100, 90, 113);
+    triangle(113, 110, 50, 100, 90, 95);
+    triangle(37, 110, 50, 100, 90, 113);
+    triangle(113, 90, 50, 100, 75, 93);
+
+    //tail
+    fill(150);
+    noStroke();
+    triangle(190, 103, 170, 111, 175, 102);
+    rect(113, 105, 65, 8);
 }
 
 function drawPlate(){
