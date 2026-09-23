@@ -38,6 +38,11 @@ function drawFish(){
     triangle(113, 110, 50, 100, 90, 95);
     triangle(37, 110, 50, 100, 90, 113);
     triangle(113, 90, 50, 100, 75, 93);
+    triangle(113, 92, 153, 100, 150, 93);
+
+    //bottom front
+    triangle(39, 114, 45, 108, 100, 128);
+    triangle(45, 114, 45, 108, 100, 120);
 
     //tail
     fill(150);
@@ -48,6 +53,15 @@ function drawFish(){
     triangle(170, 110, 145, 110, 175, 102);
     triangle(192, 113, 170, 114, 175, 102);
     triangle(118, 130, 178, 112, 113, 113);
+
+    push();
+    fill(207, 207, 198);
+    noStroke();
+    ellipse(52, 105, 3);
+    fill(242, 242, 233);
+    noStroke();
+    ellipse(52, 105, 2);
+    pop();
 
 }
 
