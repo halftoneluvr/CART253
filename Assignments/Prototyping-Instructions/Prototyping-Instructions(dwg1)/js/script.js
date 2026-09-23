@@ -3,6 +3,8 @@
  * Owen Dobson
  * 
  * Attempting to create a sort of weaving effect or tartan. 
+ * Using transparency and layering. 
+ * Leverage the strengths of the software.
  */
 
 "use strict";

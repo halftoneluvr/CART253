@@ -6,7 +6,7 @@ Owen Dobson
 
 ## Description
 
-This is the first drawing of the protyping assignment. __________________________________________________...
+This is the first drawing of the protyping assignment. It is a neon adaptation of a tartan. Using transparency and layers to convey the effect of interwoven threads. 
 
 ## Attribution
 
