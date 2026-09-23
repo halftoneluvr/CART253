@@ -44,6 +44,11 @@ function drawFish(){
     noStroke();
     triangle(190, 103, 170, 111, 175, 102);
     rect(113, 105, 65, 8);
+    triangle(175, 105, 118, 90, 130, 110);
+    triangle(170, 110, 145, 110, 175, 102);
+    triangle(192, 113, 170, 114, 175, 102);
+    triangle(118, 130, 178, 112, 113, 113);
+
 }
 
 function drawPlate(){
