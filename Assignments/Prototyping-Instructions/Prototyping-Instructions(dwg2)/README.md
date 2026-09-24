@@ -2,7 +2,7 @@
 
 Owen Dobson
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg2)/)
 
 !(Pagan Design)[CART253\Assignments\Prototyping-Instructions\Prototyping-Instructions(dwg2)\assets\images\dwg2-pagan.png]
 

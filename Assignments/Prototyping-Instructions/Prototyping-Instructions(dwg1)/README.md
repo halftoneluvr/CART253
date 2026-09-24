@@ -2,7 +2,7 @@ Prototyping Instructions Drawing 1
 
 Owen Dobson
 
-[View this project online](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg1))
+[View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg1)/)
 
 !(Neon Tartan)[CART253\Assignments\Prototyping-Instructions\Prototyping-Instructions(dwg1)\assets\images\dwg1-tartan.png]
 
