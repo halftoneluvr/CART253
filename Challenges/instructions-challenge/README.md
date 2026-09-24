@@ -2,7 +2,7 @@
 
 Owen Dobson
 
-[View this project online](https://github.com/halftoneluvr/CART253/tree/main/Challenges/instructions-challenge)
+[View this project online](https://halftoneluvr.github.io/CART253/Challenges/instructions-challenge/)
 
 ## Description
 
