@@ -4,7 +4,7 @@ Owen Dobson
 
 [View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg1)/)
 
-!(Neon Tartan)[Prototyping-Instructions(dwg1)\assets\images\dwg1-tartan.png]
+![Neon Tartan](assets/images/dwg1-tartan.png)
 
 ## Description
 
@@ -13,5 +13,3 @@ This is the first drawing of the protyping assignment. It is a neon adaptation o
 ## Attribution
 
 > - This project uses [p5.js](https://p5js.org).
-
-## License
