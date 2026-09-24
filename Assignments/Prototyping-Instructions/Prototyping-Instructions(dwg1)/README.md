@@ -4,6 +4,8 @@ Owen Dobson
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
+!(Pagan Tartan)[dwg1-tartan.png]
+
 ## Description
 
 This is the first drawing of the protyping assignment. It is a neon adaptation of a tartan. Using transparency and layers to convey the effect of interwoven threads. 

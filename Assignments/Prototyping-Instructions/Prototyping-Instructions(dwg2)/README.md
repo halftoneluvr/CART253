@@ -4,6 +4,8 @@ Owen Dobson
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
+!(Pagan Design)[dwg2-pagan.png]
+
 ## Description
 
 This is the second drawing for the Prototyping Assignment.
