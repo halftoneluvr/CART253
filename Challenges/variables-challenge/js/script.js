@@ -2,8 +2,7 @@
  * Variables Challenge
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Variables Challenge done w/ Mark. Mr. Furious is so angry! 
  */
 
 "use strict";
