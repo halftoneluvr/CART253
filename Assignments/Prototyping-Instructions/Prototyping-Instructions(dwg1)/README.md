@@ -4,7 +4,7 @@ Owen Dobson
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
-!(Pagan Tartan)[dwg1-tartan.png]
+!(Pagan Tartan)[images/dwg1-tartan.png]
 
 ## Description
 
