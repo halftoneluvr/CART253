@@ -4,7 +4,7 @@ Owen Dobson
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
-!(Neon Tartan)[assets/images/dwg1-tartan.png]
+!(Neon Tartan)[C:\Users\dobs2\OneDrive\Documents\GitHub\CART253\Assignments\Prototyping-Instructions\Prototyping-Instructions(dwg1)\assets\images\dwg1-tartan.png]
 
 ## Description
 
