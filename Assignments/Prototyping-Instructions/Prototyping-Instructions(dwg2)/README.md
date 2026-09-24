@@ -4,7 +4,7 @@ Owen Dobson
 
 [View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg2)/)
 
-!(Pagan Design)[CART253/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg2)/assets/images/dwg2-pagan.png/]
+!(Pagan Design)[assets/images/dwg2-pagan.png]
 
 ## Description
 
