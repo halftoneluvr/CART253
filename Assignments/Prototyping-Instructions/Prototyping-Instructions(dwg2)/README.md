@@ -4,7 +4,7 @@ Owen Dobson
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 
-!(Pagan Design)[images/dwg2-pagan.png]
+!(Pagan Design)[assets/images/dwg2-pagan.png]
 
 ## Description
 
