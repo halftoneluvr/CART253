@@ -9,6 +9,7 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 
 ## Challenges 
 [Instructions](https://halftoneluvr.github.io/CART253/Challenges/instructions-challenge/)
+
 [Variables](https://halftoneluvr.github.io/CART253/Challenges/variables-challenge/)
 
 ## Reflective Journal
