@@ -6,7 +6,8 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 [Variables Prototype]()
 
 ## Challenges 
-
+[]
+[Variables](https://halftoneluvr.github.io/CART253/Challenges/variables-challenge/)
 
 ## Reflective Journal
 [Check it out!](Journals/Journal1.md)
