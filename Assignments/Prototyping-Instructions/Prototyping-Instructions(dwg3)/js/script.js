@@ -2,8 +2,7 @@
  * Prototyping Assignment Drawing 3 
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Mostly playing around w/ the filters to create an abstract drawing. 
  */
 
 "use strict";
@@ -17,12 +16,14 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Drawing, then manipulating w/ filters. 
 */
 function draw() {
     //background set-up
     background(180, 205, 0);
     
+    //background image
+    push();
     //black ellipse
     fill('black');
     ellipse(225, height/2, 25, 300);
@@ -66,5 +67,13 @@ function draw() {
     ellipse(15, 2*height/3, 25);
     ellipse(35, 2*height/3, 20);
     ellipse(50, 2*height/3, 15);
+
+    //effects
+    filter(INVERT);
+    filter(BLUR);
+    filter(POSTERIZE,5);
+    filter(BLUR,1);
+
+    pop();
     
 }
