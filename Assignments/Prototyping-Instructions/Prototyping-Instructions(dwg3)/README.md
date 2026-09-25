@@ -2,7 +2,7 @@
 
 Owen Dobson 
 
-[View this project online](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg3))
+[View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg3)/)
 
 ## Description
 
