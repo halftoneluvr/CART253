@@ -2,11 +2,11 @@
 
 Owen Dobson 
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg3))
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Mostly an experientation in filters, coliur, and shape. Loosly underworld (the idm group) inspired. 
 
 ## Attribution
 
