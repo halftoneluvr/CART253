@@ -7,7 +7,7 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 
 [Pagan Polish Thang](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg2))
 
-[Undawrld](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg3)/)
+[Undawrld](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg3))
 
 ## Challenges 
 [Instructions](https://halftoneluvr.github.io/CART253/Challenges/instructions-challenge/)
