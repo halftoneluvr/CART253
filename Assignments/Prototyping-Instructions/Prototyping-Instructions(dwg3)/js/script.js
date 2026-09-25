@@ -21,38 +21,18 @@ function setup() {
 */
 function draw() {
     //background set-up
-    background(213, 255, 0);
-
-
-    //Citron yellow elements 
-    fill(173, 165, 19);
-    noStroke();
-    ellipse(100, 100, 2, 80);
-
-    // B1ue violet elements 
-    fill(107, 41, 135);
-    noStroke();
-    ellipse(8,200, 40);
-
-    //Pale Blue elements
-    fill(191, 213, 222);
-    noStroke();
-    ellipse(200,25, 85);
+    background(180, 205, 0);
     
-    //Pre-fab gradient inversion code (generated using Claude by Anthropic)
-    loadPixels();
-     for (let y = 0; y < height; y++) {
-        let amount = map(y, 0, height, 0, 1);
-        for (let x = 0; x < width; x++) {
-        let index = (x + y * width) * 4;
-        pixels[index]     = lerp(pixels[index], 255 - pixels[index], amount);
-        pixels[index + 1] = lerp(pixels[index + 1], 255 - pixels[index + 1], amount);
-        pixels[index + 2] = lerp(pixels[index + 2], 255 - pixels[index + 2], amount);
-        }
-  }
-  updatePixels();
-
-  //
-
-
+    fill('black');
+    ellipse(225, height/2, 25, 300);
+    
+    fill('white');
+    strokeWeight(7);
+    stroke('black');
+    ellipse(width/2, 2*height/3, 300, 75);
+    strokeWeight(6);
+    ellipse(40, 2*height/3, 300, 50);
+    
+    
+    
 }

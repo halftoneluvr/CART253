@@ -11,8 +11,6 @@ This description should help the reader understand what the program is, anything
 ## Attribution
 
 > - This project uses [p5.js](https://p5js.org).
-> - Pixel manipulation and gradient inversion technique (loadPixels/updatePixels 
-  blending with lerp) developed with assistance from Claude (Anthropic), 2026.
 
 ## License
 
