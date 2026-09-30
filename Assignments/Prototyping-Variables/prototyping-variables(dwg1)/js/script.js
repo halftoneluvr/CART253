@@ -2,8 +2,7 @@
  * Prototyping Variables Drawing 1 
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * A pink apparition
  */
 
 "use strict";
@@ -19,15 +18,15 @@ let object = {
     //Colour
     fill: {
         l: 0,
-        c: 0,
-        h: 0
+        a: 0,
+        b: 0
     }
 }
 
 // Canvas Setup
 function setup() {
     createCanvas(225, 225);
-    background(250);
+    background(255);
     angleMode(DEGREES);
 }
 
@@ -36,24 +35,26 @@ function draw() {
     // Frame Rate
     frameRate(10);
     
-    // The Colour Mode: LCH (lightness, chroma, hue)
-    colorMode(LCH);
+    // The Colour Mode
+    colorMode(LAB);
     noStroke();
     angleMode(DEGREES);
 
     // Colour variables 
-    fill(object.fill.l, object.fill.c, object.fill.h);
-    object.fill.l += 1;
-    object.fill.c += 1.5;
-    object.fill.h += 3.6;
+    fill(object.fill.l, object.fill.a, object.fill.b);
+    object.fill.l += 3;
+    object.fill.a += 1;
+    object.fill.b -= 1;
 
     // Adjusting position & size variables
     ellipse(object.x, object.y, object.size);
     object.x = width/2 + object.radius * cos(object.angle);
     object.y = height/2 + object.radius * sin(object.angle);
-    object.size += 1;
+    object.size += 0.75;
     object.angle += 5;
-    object.radius += 1; 
+    object.radius += 1.25; 
 
+    //filter(POSTERIZE, 150);
+    filter(BLUR, 5);
 
 }
