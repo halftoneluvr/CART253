@@ -2,7 +2,7 @@
 
 Owen Dobson
 
-[View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Varibales/prototyping-variables(dwg2))
+[View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Variables/prototyping-variables(dwg2))
 
 ## Description
 
