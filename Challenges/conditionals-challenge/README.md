@@ -2,7 +2,7 @@
 
 Owen Dobson
 
-[View this project online](https://halftoneluvr.github.io/CART253/Challenges/variables-challenge/)
+[View this project online](https://halftoneluvr.github.io/CART253/Challenges/conditionals-challenge/)
 
 ## Description
 
