@@ -1,8 +1,8 @@
-# TITLE OF PROJECT
+# Prototyping Variables Drawing 2
 
-AUTHOR NAME
+Owen Dobson
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Varibales/prototyping-variables(dwg2))
 
 ## Description
 
