@@ -1,18 +1,24 @@
 /**
- * Title of Project
- * Author Name
+ * Prototyping Variables 
+ * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Exploring the noise function in p5js.
+ * Just messing around w/ colour and undefined forms. 
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-function setup() {
+let object ={
+    t: 0,
+    a: 0, // alpha value 
+    x: undefined, //x-position
+    y: undefined //y-position
+}
 
+// Canvas setup
+function setup() {
+    createCanvas(225, 225);
+    background(245);
 }
 
 
@@ -21,4 +27,10 @@ function setup() {
 */
 function draw() {
 
+    object.x = map(noise(object.t), 0, 1, 0, width);
+    object.t += 0.1;
+    noStroke();
+    fill(68, 31, 255, object.a);
+    ellipse(object.x,0 , 15);
+    object.a += 0.11;
 }

@@ -6,7 +6,7 @@ AUTHOR NAME
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Exploring the noise function. 
 
 ## Attribution
 
