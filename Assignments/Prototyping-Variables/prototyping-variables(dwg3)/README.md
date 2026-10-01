@@ -1,6 +1,6 @@
-# TITLE OF PROJECT
+# Prototyping Variables Drawing 3 
 
-AUTHOR NAME
+Owen Dobson
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 

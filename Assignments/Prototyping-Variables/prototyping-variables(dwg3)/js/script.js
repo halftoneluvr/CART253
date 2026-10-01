@@ -1,6 +1,6 @@
 /**
- * Title of Project
- * Author Name
+ * Prototyping Variables Drawings 3
+ * Owen Dobson
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
  * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
@@ -8,17 +8,13 @@
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+// Setting up canvas and background
 function setup() {
-
+    createCanvas(225,225);
+    background(245);
 }
 
-
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
+// Doing da drawings
 function draw() {
 
 }
