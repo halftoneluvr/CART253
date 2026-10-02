@@ -2,8 +2,9 @@
  * Prototyping Variables Drawings 3
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Vaguely floral-esque abstract piece :) 
+ * Navy and a lil hint of pink
+ * Playing w/ rotation
  */
 
 "use strict";
@@ -79,7 +80,7 @@ function drawWaveTwo(){
     waveTwo.t += 1 
     noStroke();
     fill(waveTwo.fill.r, waveTwo.fill.g, waveTwo.fill.b, waveTwo.alpha);
-    waveTwo.alpha = 5
+    waveTwo.alpha = 3
     rect(waveTwo.x, waveTwo.y, 10, height - waveTwo.y);
     pop();
 }

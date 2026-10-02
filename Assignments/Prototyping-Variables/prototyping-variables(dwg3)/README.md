@@ -2,11 +2,12 @@
 
 Owen Dobson
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Variables/prototyping-variables(dwg3))
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Essentially just playing around in the abstract... I think the end result is vaguely floral :) 
+Working with the noise function, alpha values, and rotation in this variables assignment!
 
 ## Attribution
 
