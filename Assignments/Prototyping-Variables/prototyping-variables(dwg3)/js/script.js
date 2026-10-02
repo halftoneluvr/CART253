@@ -8,13 +8,80 @@
 
 "use strict";
 
+let waveOne ={
+    x: 0,
+    y: 0,
+    v: 0,
+    a: 0,
+    t: 0.1,
+    alpha: 0,
+    angle: 0,
+    fill: {
+        r: 17,
+        g: 17,
+        b: 39
+    }
+}
+
+let waveTwo ={
+    x: 0,
+    y: 0,
+    v: 0,
+    a: 0,
+    t: 0.1,
+    alpha: 0,
+    angle: 0,
+    fill: {
+        r: 17,
+        g: 17,
+        b: 39
+    }
+}
+
+let blurr = {
+    alpha: 0
+}
+
 // Setting up canvas and background
 function setup() {
     createCanvas(225,225);
-    background(245);
+    background(255);
 }
 
 // Doing da drawings
 function draw() {
 
+    // Draws first wave
+    drawWaveOne();
+
+}
+
+function drawWaveOne(){
+    push();
+    angleMode(DEGREES);
+    rotate(waveOne.angle);
+    waveOne.angle += 5
+    waveOne.x += 0.25;
+    waveOne.y = map(noise(waveOne.t), 0, 1, 0, height);
+    waveOne.t += 1 
+    noStroke();
+    fill(waveOne.fill.r, waveOne.fill.g, waveOne.fill.b, waveOne.alpha);
+    waveOne.alpha = map(noise(waveOne.t), 0, 1, 0, 50);
+    rect(waveOne.x, waveOne.y, 10, height - waveOne.y);
+    pop();
+}
+
+function drawWaveTwo(){
+    push();
+    angleMode(DEGREES);
+    rotate(waveTwo.angle);
+    waveTwo.angle += 5
+    waveTwo.x += 0.25;
+    waveTwo.y = map(noise(waveTwo.t), 0, 1, 0, height);
+    waveTwo.t += 1 
+    noStroke();
+    fill(waveTwo.fill.r, waveTwo.fill.g, waveTwo.fill.b, waveOne.alpha);
+    waveTwo.alpha = map(noise(waveTwo.t), 0, 1, 0, 50);
+    rect(waveTwo.x, waveTwo.y, 10, height - waveTwo.y);
+    pop();
 }
