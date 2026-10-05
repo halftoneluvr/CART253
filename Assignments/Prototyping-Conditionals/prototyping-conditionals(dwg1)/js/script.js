@@ -8,26 +8,34 @@
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+let tears1= {
+    x: 80,
+    y: 130
+}
+
+let tears2= {
+    x: 180,
+    y: 130
+}
+
+//sets up the canvas lol 
 function setup() {
 createCanvas(225, 225);
 background(228, 235, 167); 
-
 }
 
+//calls functions to draw base and execute action! 
 function draw() {
     //draws background 
     background(228, 235, 167); 
     // draws base eyes
     drawRegEyes();
     
-    //draws eyes in crying postion
-    drawCryingEyes();
-
     //makes tears
     drawTears();
+
+    //draws eyes in crying postion
+    drawCryingEyes();
 
 }
 
@@ -78,5 +86,13 @@ function drawCryingEyes(){
 
 //makes tears
 function drawTears(){
-
+push();
+    if (mouseIsPressed) {
+        angleMode(DEGREES);
+        noStroke(); 
+        fill(255);
+        ellipse(tears1.x, tears1.y, 10);
+        ellipse(tears2.x, tears2.y, 10); 
+    }
+pop();
 }
