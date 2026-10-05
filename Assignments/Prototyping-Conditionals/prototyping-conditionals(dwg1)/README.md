@@ -2,9 +2,9 @@
 
 Owen Dobson
 
-![chillin](prototyping-conditionals(dwg1)/assets/images/Screenshot 2026-10-05 125057.png)
+![chillin](prototyping-conditionals(dwg1)/assets/images/chillin.png)
 
-![cryin](prototyping-conditionals(dwg1)/assets/images/Screenshot 2026-10-05 125129.png)
+![cryin](prototyping-conditionals(dwg1)/assets/images/cryin.png)
 
 [View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Conditionals/prototyping-conditionals(dwg1))
 
