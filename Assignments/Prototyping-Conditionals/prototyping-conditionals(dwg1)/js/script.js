@@ -2,8 +2,8 @@
  * Protoyping Conditionals Drawing 1
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Makes my sweet little green guy cry when you press the mouse!
+ * Ahh, don't do that to him!!!
  */
 
 "use strict";
@@ -15,12 +15,14 @@ let tears1= {
     x: 80,
     y: 130,
     a: 8,
-    n: 5
+    n: 5,
+    t: 0
 }
 
 let tears2= {
     x: 180,
-    y: 130
+    y: 130,
+    t2: 0
 }
 
 //sets up the canvas lol 
@@ -112,29 +114,36 @@ function drawTears(){
             y: tears2.y,
             a: tears1.a
         })
-        // moves tears on x 
+        // moves tears on y 
         tears1.y += 0.4;
         tears2.y += 0.4; 
-
+        // moves tears on x 
+        tears1.x += map(noise(tears1.t), 0, 1, -0.51, 0.49);
+        tears2.x -=  map(noise(tears2.t2), 0, 1, -0.49, 0.51);
+        tears1.t += 0.41;
+        tears2.t2 += 0.39;
+    
     } else {
         // resets all positions when mouse is not pressed 
         tears1Trail = [];
         tears2Trail = [];
         tears1.y = 130;
         tears2.y = 130;
+        tears1.x = 79;
+        tears2.x = 181;
     }
         
     for (let pos of tears1Trail) {
         fill(79, 223, 255, tears1.a);
         // varies alpha value 
-        tears1.a = map(noise(tears1.n), 0, 1, 0, 20);
+        tears1.a = map(noise(tears1.n), 0, 1, 5, 20);
         tears1.n += 0.25; 
         ellipse(pos.x, pos.y, 10); // draws tears 
     }
     for (let pos of tears2Trail) {
         fill(79, 223, 255, tears1.a);
         // varies alpha value 
-        tears1.a = map(noise(tears1.n), 0, 1, 0, 20);
+        tears1.a = map(noise(tears1.n), 0, 1, 5, 20);
         tears1.n += 0.25; 
         ellipse(pos.x, pos.y, 10); // draws tears 
     }
