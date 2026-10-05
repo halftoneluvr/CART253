@@ -14,7 +14,8 @@ let tears2Trail = [] // stores pos of past tears on 2nd eye
 let tears1= {
     x: 80,
     y: 130,
-    a: 200
+    a: 8,
+    n: 5
 }
 
 let tears2= {
@@ -96,21 +97,25 @@ function drawCryingEyes(){
 //makes tears
 function drawTears(){
     push();
+    // set up tears 
     angleMode(DEGREES);
     noStroke(); 
     fill(79, 223, 255, tears1.a);
     if (mouseIsPressed) {
         tears1Trail.push({
             x: tears1.x,
-            y: tears1.y
+            y: tears1.y,
+            a: tears1.a
         })
         tears2Trail.push({
             x: tears2.x,
-            y: tears2.y
+            y: tears2.y,
+            a: tears1.a
         })
-        // moves tears 
-        tears1.y += 0.25;
-        tears2.y += 0.25; 
+        // moves tears on x 
+        tears1.y += 0.4;
+        tears2.y += 0.4; 
+
     } else {
         // resets all positions when mouse is not pressed 
         tears1Trail = [];
@@ -120,10 +125,18 @@ function drawTears(){
     }
         
     for (let pos of tears1Trail) {
-        ellipse(pos.x, pos.y, 10);
+        fill(79, 223, 255, tears1.a);
+        // varies alpha value 
+        tears1.a = map(noise(tears1.n), 0, 1, 0, 20);
+        tears1.n += 0.25; 
+        ellipse(pos.x, pos.y, 10); // draws tears 
     }
     for (let pos of tears2Trail) {
-        ellipse(pos.x, pos.y, 10); 
+        fill(79, 223, 255, tears1.a);
+        // varies alpha value 
+        tears1.a = map(noise(tears1.n), 0, 1, 0, 20);
+        tears1.n += 0.25; 
+        ellipse(pos.x, pos.y, 10); // draws tears 
     }
     pop();
 }
