@@ -2,7 +2,7 @@
 
 Owen Dobson
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[Events Challenge]((https://halftoneluvr.github.io/CART253/Challenges/events-challenge/))
 
 ## Description
 
