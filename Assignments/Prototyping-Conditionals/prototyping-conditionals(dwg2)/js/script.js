@@ -10,15 +10,22 @@
 
 let trail = [];
 
+let growing = {
+    size: true,
+    h: true,
+    s: true,
+    b: true
+}
+
 //setting up user variables 
 let user = {
     x: undefined,
     y: undefined,
-    size: 5,
+    size: 2,
     fill: {
         h: 0,
-        s: 0,
-        b: 0
+        s: 30,
+        b: 65
     }
 }
 
@@ -85,4 +92,55 @@ function drawPattern(){
         ellipse(pos.x, pos.y, user.size);
     }
     pop(); 
+}
+
+function mouseDragged(){
+    //creates variation in size based on mouse drag 
+    if(growing.size){
+        user.size += 0.005;
+            if(user.size >= 7){
+                growing.size = false;
+            }
+    } else{
+        user.size -= 0.008;
+        if(user.size <= 2) {
+            growing.size = true;
+        }
+    }
+    // changes values of hue 
+    if(growing.h){
+        user.fill.h += 3;
+            if(user.fill.h >= 360){
+                growing.h = false;
+            }
+    } else{
+        user.fill.h -= 3;
+        if(user.fill.h <= 0) {
+            growing.h = true;
+        }
+    }
+    // changes values of saturation
+    if(growing.s){
+        user.fill.s += 1;
+            if(user.fill.s >= 0){
+                growing.s = false;
+            }
+    } else{
+        user.fill.s -= 1;
+        if(user.fill.s <= 20) {
+            growing.s = true;
+        }
+    }
+    // changes values of brightness/value
+    if(growing.b){
+        user.fill.b += 1;
+            if(user.fill.b >= 85){
+                growing.b = false;
+            }
+    } else{
+        user.fill.b -= 1;
+        if(user.fill.b <= 55) {
+            growing.b = true;
+        }
+    }
 }
