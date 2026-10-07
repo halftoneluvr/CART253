@@ -8,6 +8,8 @@
 
 "use strict";
 
+let trail = [];
+
 let growing = {
     b: true,
     a: true
@@ -25,7 +27,7 @@ let base = {
 let user = {
     x: undefined,
     y: undefined,
-    size: 75,
+    size: 25,
     fill: {
         r: 255,
         g: 255, 
@@ -56,7 +58,9 @@ function draw() {
     rect(0, 0, width, height);
     colourShift(); // creates colour shift in base 
 
-    mouseClicked()
+    //creating trail effect
+    createTrail();
+    
      //filters
     filter(BLUR,12);
     filter(DILATE,100);
@@ -90,10 +94,17 @@ function colourShift() {
     }
 }
 
-function mouseClicked(){
-    push();
-    noStroke();
-    fill(user.fill.r, user.fill.g, user.fill.b);
-    ellipse(user.x, user.y, user.size);
-    pop();
+function createTrail(){
+    if(mouseIsPressed){
+        trail.push({
+            x: user.x,
+            y: user.y
+        });
+    } else{
+        trail = [];
+    } for(let pos of trail){
+        noStroke();
+        fill(user.fill.r, user.fill.g, user.fill.b);
+        ellipse(pos.x, pos.y, user.size); // draws ellipse
+    }
 }
