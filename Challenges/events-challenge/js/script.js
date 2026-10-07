@@ -60,3 +60,19 @@ function displayScore() {
   text(floor(score), width/2, height/2);
   pop();
 }
+
+function lose(){
+    gameOver = true;
+}
+
+function keyPressed(){
+    lose();
+}
+
+function mousePressed(){
+    lose();  
+}
+
+function mouseMoved(){
+    lose();
+}
