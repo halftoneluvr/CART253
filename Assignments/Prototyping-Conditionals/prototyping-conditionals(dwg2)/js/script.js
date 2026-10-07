@@ -2,8 +2,10 @@
  * Protoyping Conditionals Drawing 2
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Made a little symmetrical drawing tool/mandala tool? 
+ * V cute pastel sorta colours :) 
+ * Variation in thickness tocover area or add detail! 
+ * Customize yours today ;) 
  */
 
 "use strict";
@@ -98,7 +100,7 @@ function mouseDragged(){
     //creates variation in size based on mouse drag 
     if(growing.size){
         user.size += 0.005;
-            if(user.size >= 7){
+            if(user.size >= 6.5){
                 growing.size = false;
             }
     } else{
