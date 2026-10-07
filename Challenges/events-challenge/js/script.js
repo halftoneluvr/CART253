@@ -69,10 +69,24 @@ function keyPressed(){
     lose();
 }
 
+function keyReleased(){
+    lose();
+}
+
 function mousePressed(){
     lose();  
 }
 
 function mouseMoved(){
     lose();
+}
+
+//Spicy lol: check initial staus
+function checkInitialStatus(){
+    if (navigator.onLine) {
+        console.log("Online");
+    } else {
+        console.log("Offline");
+        lose();
+    }
 }
