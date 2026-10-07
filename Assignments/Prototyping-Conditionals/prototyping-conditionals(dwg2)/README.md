@@ -2,6 +2,8 @@
 
 Owen Dobson 
 
+![try it for yourself!](assets/images/tester_dwg2.png)
+
 [View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Conditionals/prototyping-conditionals(dwg2))
 
 ## Description
