@@ -25,7 +25,7 @@ let base = {
 let user = {
     x: undefined,
     y: undefined,
-    size: 25,
+    size: 75,
     fill: {
         r: 255,
         g: 255, 
@@ -58,32 +58,33 @@ function draw() {
 
     mouseClicked()
      //filters
-    filter(BLUR,10);
-    filter(DILATE,1000);
+    filter(BLUR,12);
+    filter(DILATE,100);
+    filter(POSTERIZE,30);
 }
 
 function colourShift() {
     // shifting the blue values 
     if (growing.b){
-        base.fill.b += 1;
+        base.fill.b += 0.5;
         if(base.fill.b >= 255){
             growing.b = false;
         }
     } else{
-        base.fill.b -= 1; 
+        base.fill.b -= 0.5; 
         if(base.fill.b <= 0){
             growing.b = true;
         }
     }
     //shifting alpha values 
     if (growing.a){
-        base.fill.a += 9.3;
+        base.fill.a += 1;
         if(base.fill.a >= 255){
             growing.a = false;
         }
     } else{
-        base.fill.a -= 9.3; 
-        if(base.fill.a <= 200){
+        base.fill.a -= 1; 
+        if(base.fill.a <= 0){
             growing.a = true;
         }
     }
