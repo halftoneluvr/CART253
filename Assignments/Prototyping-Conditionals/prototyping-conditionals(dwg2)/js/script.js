@@ -8,8 +8,22 @@
 
 "use strict";
 
+let trail = [];
+
+//setting up user variables 
+let user = {
+    x: undefined,
+    y: undefined,
+    size: 5,
+    fill: {
+        h: 0,
+        s: 0,
+        b: 0
+    }
+}
+
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * sets up canvas and background 
 */
 function setup() {
 createCanvas(225, 225);
@@ -18,9 +32,12 @@ background(245);
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draws the pattern based on user activity
 */
 function draw() {
+    // assigns user position based on mouse 
+    user.x = mouseX;
+    user.y = mouseY;
 
     // Top-Left
     push();
@@ -51,5 +68,21 @@ function draw() {
 }
 
 function drawPattern(){
-    
+    push();
+    if(mouseIsPressed){
+        trail.push({
+            x: user.x,
+            y: user.y
+        });
+    }
+    else{
+        trail = [];
+    }
+    for(let pos of trail){
+        colorMode(HSB);
+        noStroke();
+        fill(user.fill.h, user.fill.s, user.fill.b);
+        ellipse(pos.x, pos.y, user.size);
+    }
+    pop(); 
 }
