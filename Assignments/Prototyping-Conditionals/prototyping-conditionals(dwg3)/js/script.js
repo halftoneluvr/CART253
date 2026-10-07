@@ -2,8 +2,8 @@
  * Protoyping Conditionals Drawing 3
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Makes a fun bleeding effect on the canvas with lots of oscillations
+ * Been doing tones of purple and chartreuse/yellowish green!  
  */
 
 "use strict";
