@@ -2,7 +2,7 @@
 
 Owen Dobson
 
-[Events Challenge]((https://halftoneluvr.github.io/CART253/Challenges/events-challenge/))
+[Events Challenge](https://halftoneluvr.github.io/CART253/Challenges/events-challenge/)
 
 ## Description
 
