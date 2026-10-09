@@ -8,7 +8,8 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 ## Prototyping Instructions
 
 ### Neon Tartan
-[Neon Tartan](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg1))
+[View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg1)/)
+[View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg1))
 
 ### Pagan Polish Thang
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Instructions/Prototyping-Instructions(dwg2))
