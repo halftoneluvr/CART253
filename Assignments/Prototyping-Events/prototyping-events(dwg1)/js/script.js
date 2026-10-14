@@ -11,6 +11,15 @@ let img;
 
 let textToStart = "Adorn my face";
 
+let marks = [];
+
+let fillColour = {
+    r: 255,
+    g: 255, 
+    b: 255,
+    a: 180
+}
+
 // sets up canvas when photo is ready to load 
 async function setup() {
     createCanvas(400, 300); // Canvas created w/ same aspect ratio as photo 
@@ -23,10 +32,12 @@ function draw() {
     // creates explainer text
     explainText();
 
-    //draws first design 
-    design1();
+    // draws all points that have been previously marked 
+    for(let pos of marks){
+        design1(pos.x, pos.y);
+    }
 
-    //Signals success 
+    //Signals success and ends program
     allOptionsExhausted();
 
 }
@@ -45,8 +56,14 @@ function explainText(){
 }
 
 // Draws fist design
-function design1(){
-
+function design1(x, y){
+    push();
+    stroke(fillColour.r, fillColour.g, fillColour.b, fillColour.a);
+    strokeWeight(3);
+    strokeCap(SQUARE);
+    line(x - 10, y, x + 10, y);
+    line(x, y - 10, x, y + 16);
+    pop();
 }
 
 // Signals that all options have been exhausted 
@@ -54,7 +71,8 @@ function allOptionsExhausted(){
 
 }
 
-function mouseClicked(){
+function mousePressed(){
     textToStart = "";
     image(img, 0, 0, width, height);
-}
+    marks.push({ x: mouseX, y: mouseY });
+} 
