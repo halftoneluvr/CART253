@@ -11,8 +11,12 @@ let img;
 
 let textToStart = "Adorn my face";
 
-let marks = [];
+// defining variables for cross 
+let cross = [];
+let crossTrail = [];
+let crossTrailMax = 35;
 
+// universal fill for designs 
 let fillColour = {
     r: 255,
     g: 255, 
@@ -28,13 +32,25 @@ async function setup() {
 }
 
 function draw() {
+    //background image
+    image(img, 0, 0, width, height);
 
     // creates explainer text
     explainText();
 
     // draws all points that have been previously marked 
-    for(let pos of marks){
+    for(let pos of cross){
         design1(pos.x, pos.y);
+    }
+
+    // creates faint cross on mouse position 
+    for(let pos of crossTrail){
+        crossFaint(pos.x, pos.y);
+    }
+    // removes old points when mouse is moved beyong set limit
+    crossTrail.push({x: mouseX, y: mouseY});
+    if (crossTrail.length > crossTrailMax) {
+        crossTrail.shift();
     }
 
     //Signals success and ends program
@@ -66,13 +82,22 @@ function design1(x, y){
     pop();
 }
 
-// Signals that all options have been exhausted 
-function allOptionsExhausted(){
-
+function crossFaint(x, y){
+    push();
+    stroke(fillColour.r, fillColour.g, fillColour.b, 3);
+    strokeWeight(3);
+    strokeCap(SQUARE);
+    line(x - 10, y, x + 10, y);
+    line(x, y - 10, x, y + 16);
+    pop();
 }
 
 function mousePressed(){
     textToStart = "";
-    image(img, 0, 0, width, height);
-    marks.push({ x: mouseX, y: mouseY });
+    cross.push({x: mouseX, y: mouseY});
 } 
+
+// Signals that all options have been exhausted 
+function allOptionsExhausted(){
+
+}
