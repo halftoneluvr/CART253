@@ -54,7 +54,10 @@ function draw() {
     }
 
     //Signals success and ends program
-    allOptionsExhausted();
+    if(cross.length >= 16){
+        allOptionsExhausted();
+        fillColour.a -= 1;
+    }
 
 }
 
@@ -99,5 +102,13 @@ function mousePressed(){
 
 // Signals that all options have been exhausted 
 function allOptionsExhausted(){
-
+    push();
+    // defines font 
+    fill(255);
+    textSize(24);                 
+    textFont("Arial");          
+    textStyle(NORMAL);             
+    textAlign(CENTER, CENTER);
+    text("All done!", width/2, height/2);
+    pop();
 }
