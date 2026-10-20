@@ -10,8 +10,8 @@
 
 let rectangle = {
     size:{
-        x: 255,
-        y: 255
+        x: 225,
+        y: 225
     },
     fill:{
         r: 0,
@@ -49,6 +49,7 @@ function drawRect(){
 }
 
 function shiftRect(){
+    //creates changes in size based on key presses
     if(keyIsPressed === true){
         if(key === 'w'){
             rectangle.size.y -= 1;
@@ -60,4 +61,8 @@ function shiftRect(){
             rectangle.size.x += 1;
         }
     }
+    //constrains size of rectangle
+    rectangle.size.x = constrain(rectangle.size.x, -225, 225);
+    rectangle.size.y = constrain(rectangle.size.y, -225, 225);
+
 }
