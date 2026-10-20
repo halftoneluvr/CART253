@@ -8,6 +8,10 @@
 
 "use strict";
 
+//delcares boolean for instructions 
+let showInstructions = true;
+
+// declares varibales for rectangle 
 let rectangle = {
     size:{
         x: 225,
@@ -30,9 +34,16 @@ function setup() {
 function draw() {
     background(245);
 
-    drawRect();
+    drawRect(); // creates rectangle 
 
-    shiftRect();
+    shiftRect(); // shifts size based on keys 
+
+    shiftColour(); // shifts colour 
+
+    //lays out instructions until mouse is pressed
+    if (showInstructions){
+        addInstructions();
+    }
 }
 
 //Draws the base rectangle which will be maniputated 
@@ -48,6 +59,7 @@ function drawRect(){
     rect(width/2, height/2, rectangle.size.x, rectangle.size.y);
 }
 
+//shifts size of rectangle
 function shiftRect(){
     //creates changes in size based on key presses
     if(keyIsPressed === true){
@@ -64,5 +76,30 @@ function shiftRect(){
     //constrains size of rectangle
     rectangle.size.x = constrain(rectangle.size.x, -225, 225);
     rectangle.size.y = constrain(rectangle.size.y, -225, 225);
+}
 
+//shifts colour on rectangle 
+function shiftColour(){
+    
+}
+
+// add text directions 
+function addInstructions(){
+    push();
+    fill(255);
+    textSize(14);                 
+    textFont("Arial");          
+    textStyle(NORMAL);             
+    textAlign(CENTER, CENTER);
+    text("use w, a, s & d keys to shift :)", width/2, height/2); 
+    pop();  
+}
+
+// creating functions so that instructions disapear 
+function mousePressed(){
+    showInstructions = false;
+}
+
+function keyPressed(){
+    showInstructions = false;
 }
