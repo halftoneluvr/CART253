@@ -13,15 +13,18 @@ let showInstructions = true;
 
 // declares varibales for rectangle 
 let rectangle = {
+    pos:{
+        x: undefined,
+        y: undefined
+    },
     size:{
         x: 225,
         y: 225
     },
     fill:{
-        r: 0,
-        g: 0,
+        h: 0,
+        s: 0,
         b: 0, 
-        a: 255
     }
 }
 
@@ -48,15 +51,19 @@ function draw() {
 
 //Draws the base rectangle which will be maniputated 
 function drawRect(){
+    push();
     noStroke();
     fill(
-        rectangle.fill.r, 
-        rectangle.fill.g, 
-        rectangle.fill.b, 
-        rectangle.fill.a
+        rectangle.fill.h, 
+        rectangle.fill.s, 
+        rectangle.fill.b
     );
     rectMode(CENTER);
-    rect(width/2, height/2, rectangle.size.x, rectangle.size.y);
+    rect(rectangle.pos.x = width/2, 
+        rectangle.pos.y = height/2, 
+        rectangle.size.x, 
+        rectangle.size.y);
+    pop();
 }
 
 //shifts size of rectangle
@@ -80,7 +87,10 @@ function shiftRect(){
 
 //shifts colour on rectangle 
 function shiftColour(){
-    
+    push();
+    colorMode(HSB); // adjusts for brighter 
+
+    pop();
 }
 
 // add text directions 
