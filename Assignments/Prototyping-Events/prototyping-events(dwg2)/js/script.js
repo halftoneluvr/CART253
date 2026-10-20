@@ -32,6 +32,7 @@ function draw() {
 
     drawRect();
 
+    shiftRect();
 }
 
 //Draws the base rectangle which will be maniputated 
@@ -44,9 +45,19 @@ function drawRect(){
         rectangle.fill.a
     );
     rectMode(CENTER);
-    rect(width/2, height/2, 225, 225);
+    rect(width/2, height/2, rectangle.size.x, rectangle.size.y);
 }
 
 function shiftRect(){
-
+    if(keyIsPressed === true){
+        if(key === 'w'){
+            rectangle.size.y -= 1;
+        } else if (key === 's'){
+            rectangle.size.y += 1;
+        } else if (key === 'a'){
+            rectangle.size.x -= 1;
+        } else if (key === 'd'){
+            rectangle.size.x += 1;
+        }
+    }
 }
