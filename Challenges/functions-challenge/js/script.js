@@ -16,8 +16,9 @@ const ball = {
     height: 10,
     velocity: {
         x: 0,
-        y: 10
-    }
+        y: 3
+    },
+    acceleration: 0.15
 };
 
 // Our paddle
@@ -67,7 +68,12 @@ function movePaddle(paddle) {
  * Moves the ball passed in as a parameter
  */
 function moveBall(ball) {
-
+    ball.y += ball.velocity.y;
+    ball.velocity.y += ball.acceleration;
+    if(ball.y >= height){
+        ball.y = 20;
+        ball.velocity.y = 3;
+    }
 }
 
 /**
