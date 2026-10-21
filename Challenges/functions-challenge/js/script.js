@@ -80,7 +80,12 @@ function moveBall(ball) {
  * Bounces the provided ball off the provided paddle
  */
 function handleBounce(ball, paddle) {
-
+    const d = dist(
+        paddle.x, paddle.y, ball.x, ball.y);
+    const overlap = (d < paddle.height/d + ball.height/2); 
+    if(overlap){
+        ball.velocity.y *= -1;
+    }
 }
 
 /**
