@@ -32,7 +32,8 @@ let rectangle = {
     }
 }
 
-const minSize = -25;
+const minSizeX = -225;
+const minSizeY = -225;
 const regrowSpeed = 3; 
 
 //setting up canvas and background 
@@ -57,6 +58,8 @@ function draw() {
 
     // does a little reset to keep user in gradient zone 
     cuteReset();
+
+    filter(POSTERIZE, 13);
 }
 
 //Draws the base rectangle which will be maniputated 
@@ -141,7 +144,7 @@ function keyPressed(){
 
 function cuteReset(){
     // checks width 
-    if(rectangle.size.x <= minSize){
+    if(rectangle.size.x <= minSizeX){
         rectangle.regrowing.x = true;
     }    
     // resets width 
@@ -152,7 +155,7 @@ function cuteReset(){
             }
         }
     // checks height 
-    if(rectangle.size.y <= minSize){
+    if(rectangle.size.y <= minSizeY){
         rectangle.regrowing.y = true;
     }  
     // reset height   
