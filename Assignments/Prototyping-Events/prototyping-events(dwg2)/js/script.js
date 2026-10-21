@@ -22,11 +22,18 @@ let rectangle = {
         y: 225
     },
     fill:{
-        h: 0,
-        s: 0,
-        b: 0, 
+        h: 255,
+        s: 255,
+        b: 255, 
+    }, 
+    regrowing:{
+        x: false,
+        y: true
     }
 }
+
+const minSize = -25;
+const regrowSpeed = 3; 
 
 //setting up canvas and background 
 function setup() {
@@ -35,7 +42,7 @@ function setup() {
 
 //draws the thang 
 function draw() {
-    background(245);
+    background(255);
 
     drawRect(); // creates rectangle 
 
@@ -47,6 +54,9 @@ function draw() {
     if (showInstructions){
         addInstructions();
     }
+
+    // does a little reset to keep user in gradient zone 
+    cuteReset();
 }
 
 //Draws the base rectangle which will be maniputated 
@@ -71,13 +81,13 @@ function shiftRect(){
     //creates changes in size based on key presses
     if(keyIsPressed === true){
         if(key === 'w'){
-            rectangle.size.y -= 1;
+            rectangle.size.y -= 2;
         } else if (key === 's'){
-            rectangle.size.y += 1;
+            rectangle.size.y += 2;
         } else if (key === 'a'){
-            rectangle.size.x -= 1;
+            rectangle.size.x -= 2;
         } else if (key === 'd'){
-            rectangle.size.x += 1;
+            rectangle.size.x += 2;
         }
     }
     //constrains size of rectangle
@@ -89,7 +99,7 @@ function shiftRect(){
 function shiftColour(){
     push();
     noStroke();
-    colorMode(HSB, 100); // adjusts colourMode
+    colorMode(HSB, 360, 100, 100, 100); // adjusts colourMode
    
     // finding important points on rectangle to map gradient appropriately 
     let left = (rectangle.pos.x - rectangle.size.x/2);
@@ -99,15 +109,15 @@ function shiftColour(){
 
     // runs a for loop to initiate a new colour value across the rectangle 
     for (let i = 0; i < w; i++) {
-        let hueValueX = map(i, 0, w, 40, 60);
-        fill(hueValueX, 100, 100);
+        let hueValueX = map(i, 0, w, 45, 85);
+        fill(hueValueX, 100, 100, 75);
         rect(left + i, top, 1, h);
     }
 
     // runs a for loop to initiate a new colour value down the rectangle 
     for (let k = 0; k < h; k++) {
-        let hueValueY = map(k, 0, h, 290, 310);
-        fill(hueValueY, 100, 100);
+        let hueValueY = map(k, 0, h, 280, 320);
+        fill(hueValueY, 100, 100, 75);
         rect(left, top + k, w, 1);
     }
     pop();
@@ -132,4 +142,17 @@ function mousePressed(){
 
 function keyPressed(){
     showInstructions = false;
+}
+
+function cuteReset(){
+    // checks width 
+    if(rectangle.size.x <= minSize){
+        rectangle.regrowing.x = true;
+    }    
+    if (rectangle.regrowing.x === true){
+            rectangle.size.x += regrowSpeed;
+            if (rectangle.size.x >= 225) {
+                rectangle.regrowing.x = false;
+            }
+        }
 }
