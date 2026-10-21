@@ -21,6 +21,19 @@ const ball = {
     acceleration: 0.15
 };
 
+// second ball 
+const ball2 = {
+    x: 300,
+    y: 20,
+    width: 10,
+    height: 10,
+    velocity: {
+        x: 0,
+        y: 1.5
+    },
+    acceleration: 0.45
+};
+
 // Our paddle
 const paddle = {
     x: 300,
@@ -45,11 +58,17 @@ function draw() {
 
     movePaddle(paddle);
     moveBall(ball);
+    moveBall(ball2);
 
     handleBounce(ball, paddle);
+    handleBounce(ball2, paddle);
 
     drawPaddle(paddle);
     drawBall(ball);
+    drawBall(ball2);
+
+    checkOverlap(paddle, ball);
+    checkOverlap(paddle, ball2);
 }
 
 /**
@@ -80,11 +99,11 @@ function moveBall(ball) {
  * Bounces the provided ball off the provided paddle
  */
 function handleBounce(ball, paddle) {
-    const d = dist(
-        paddle.x, paddle.y, ball.x, ball.y);
-    const overlap = (d < paddle.height/d + ball.height/2); 
-    if(overlap){
+    if(checkOverlap(paddle, ball)){
         ball.velocity.y *= -1;
+    }
+     if(checkOverlap(paddle, ball2)){
+        ball2.velocity.y *= -1;
     }
 }
 
