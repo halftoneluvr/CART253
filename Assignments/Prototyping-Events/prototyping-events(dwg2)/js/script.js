@@ -28,10 +28,18 @@ let rectangle = {
     }, 
     regrowing:{
         x: false,
-        y: true
+        y: false
+    },
+    velocity:{
+        x: 1,
+        y: 1
     }
 }
 
+// declaring constants 
+const acc = 0.15;
+const maxSpeed = 5;
+const friction = 0.88;
 const minSizeX = -225;
 const minSizeY = -225;
 const regrowSpeed = 3; 
@@ -81,17 +89,71 @@ function drawRect(){
 
 //shifts size of rectangle
 function shiftRect(){
+    let pushX = 0;
+    let pushY = 0;
     //creates changes in size based on key presses
-    if(keyIsPressed === true){
-        if(keyIsDown('w')) rectangle.size.y -= 2;
-        if (keyIsDown('s')) rectangle.size.y += 2;
-        if (keyIsDown('a')) rectangle.size.x -= 2;
-        if (keyIsDown('d')) rectangle.size.x += 2;
+        if(keyIsDown('w')) pushY -= 2;
+        if (keyIsDown('s')) pushY += 2;
+        if (keyIsDown('a')) pushX -= 2;
+        if (keyIsDown('d')) pushX += 2;
+    
+    // adds acceleration 
+    rectangle.velocity.x += pushX * acc;
+    rectangle.velocity.y += pushY * acc;
+
+    // adds friction 
+    if (pushX === 0){
+        rectangle.velocity.x *= friction;
     }
-    //constrains size of rectangle
+    if (pushY === 0){
+        rectangle.velocity.y *= friction;
+    }
+
+    // velcoity changes size 
+    rectangle.size.x += rectangle.velocity.x;
+    rectangle.size.y += rectangle.velocity.y; 
+
+    // caps speed
+    rectangle.velocity.x = constrain(rectangle.velocity.x, -maxSpeed, maxSpeed);
+    rectangle.velocity.y = constrain(rectangle.velocity.y, -maxSpeed, maxSpeed);
+    if (rectangle.size.x <= -225 || rectangle.size.x >= 225) rectangle.velocity.x = 0;
+    if (rectangle.size.y <= -225 || rectangle.size.y >= 225) rectangle.velocity.y = 0;
+
+     //constrains size of rectangle
     rectangle.size.x = constrain(rectangle.size.x, -225, 225);
     rectangle.size.y = constrain(rectangle.size.y, -225, 225);
 }
+
+// // work out which direction each axis is being pushed this frame
+//     let pushX = 0;
+//     let pushY = 0;
+//     if (keyIsDown(87)) pushY -= 1; // W
+//     if (keyIsDown(83)) pushY += 1; // S
+//     if (keyIsDown(65)) pushX -= 1; // A
+//     if (keyIsDown(68)) pushX += 1; // D
+
+//     // acceleration changes velocity
+//     rectangle.vel.x += pushX * ACCEL;
+//     rectangle.vel.y += pushY * ACCEL;
+
+//     // with no key held on an axis, friction slows it down
+//     if (pushX === 0) rectangle.vel.x *= FRICTION;
+//     if (pushY === 0) rectangle.vel.y *= FRICTION;
+
+//     // cap the speed
+//     rectangle.vel.x = constrain(rectangle.vel.x, -MAX_SPEED, MAX_SPEED);
+//     rectangle.vel.y = constrain(rectangle.vel.y, -MAX_SPEED, MAX_SPEED);
+
+//     // velocity changes size
+//     rectangle.size.x += rectangle.vel.x;
+//     rectangle.size.y += rectangle.vel.y;
+
+//     // limits, and kill the speed when you hit one so it doesn't "stick" to the wall
+//     if (rectangle.size.x <= -225 || rectangle.size.x >= 225) rectangle.vel.x = 0;
+//     if (rectangle.size.y <= -225 || rectangle.size.y >= 225) rectangle.vel.y = 0;
+//     rectangle.size.x = constrain(rectangle.size.x, -225, 225);
+//     rectangle.size.y = constrain(rectangle.size.y, -225, 225);
+
 
 //shifts colour on rectangle 
 function shiftColour(){
