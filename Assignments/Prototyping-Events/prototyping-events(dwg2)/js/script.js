@@ -80,15 +80,10 @@ function drawRect(){
 function shiftRect(){
     //creates changes in size based on key presses
     if(keyIsPressed === true){
-        if(key === 'w'){
-            rectangle.size.y -= 2;
-        } else if (key === 's'){
-            rectangle.size.y += 2;
-        } else if (key === 'a'){
-            rectangle.size.x -= 2;
-        } else if (key === 'd'){
-            rectangle.size.x += 2;
-        }
+        if(keyIsDown('w')) rectangle.size.y -= 2;
+        if (keyIsDown('s')) rectangle.size.y += 2;
+        if (keyIsDown('a')) rectangle.size.x -= 2;
+        if (keyIsDown('d')) rectangle.size.x += 2;
     }
     //constrains size of rectangle
     rectangle.size.x = constrain(rectangle.size.x, -225, 225);
@@ -149,10 +144,22 @@ function cuteReset(){
     if(rectangle.size.x <= minSize){
         rectangle.regrowing.x = true;
     }    
+    // resets width 
     if (rectangle.regrowing.x === true){
             rectangle.size.x += regrowSpeed;
             if (rectangle.size.x >= 225) {
                 rectangle.regrowing.x = false;
+            }
+        }
+    // checks height 
+    if(rectangle.size.y <= minSize){
+        rectangle.regrowing.y = true;
+    }  
+    // reset height   
+    if (rectangle.regrowing.y === true){
+            rectangle.size.y += regrowSpeed;
+            if (rectangle.size.y >= 225) {
+                rectangle.regrowing.y = false;
             }
         }
 }
