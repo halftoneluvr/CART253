@@ -88,8 +88,28 @@ function shiftRect(){
 //shifts colour on rectangle 
 function shiftColour(){
     push();
-    colorMode(HSB); // adjusts for brighter 
+    noStroke();
+    colorMode(HSB, 100); // adjusts colourMode
+   
+    // finding important points on rectangle to map gradient appropriately 
+    let left = (rectangle.pos.x - rectangle.size.x/2);
+    let top = (rectangle.pos.y - rectangle.size.y/2);
+    let w = (rectangle.size.x);
+    let h = (rectangle.size.y);
 
+    // runs a for loop to initiate a new colour value across the rectangle 
+    for (let i = 0; i < w; i++) {
+        let hueValueX = map(i, 0, w, 40, 60);
+        fill(hueValueX, 100, 100);
+        rect(left + i, top, 1, h);
+    }
+
+    // runs a for loop to initiate a new colour value down the rectangle 
+    for (let k = 0; k < h; k++) {
+        let hueValueY = map(k, 0, h, 290, 310);
+        fill(hueValueY, 100, 100);
+        rect(left, top + k, w, 1);
+    }
     pop();
 }
 
