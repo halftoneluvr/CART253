@@ -49,6 +49,8 @@ function draw() {
     // adds text
     addText1();
     addText2();
+
+    moreText();
 }
 
 function addText1(){
@@ -96,4 +98,17 @@ function cycleImages(){
     } else {
         counter = 0;
     }
+}
+
+function moreText(){
+    push();
+    let a = 150; // variable for alpha value 
+    fill(255, 255, 255, a);
+    textSize(12);                 
+    textFont("Arial");          
+    textStyle(NORMAL);     
+    textWrap(CHAR);        
+    textAlign(CENTER, TOP);
+    text("It feels good to know that I can still taste beyond my past. The tart assault of cherry against the sustenance of wheat and butter. A testament to resourceful people. To balanced people…in fact, at times, tart people; refreshingly so, that is." , 0, 0, 225); 
+    pop();  
 }
