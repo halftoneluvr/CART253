@@ -2,8 +2,7 @@
  * Prototyping Events Drawing 3
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * "do it sweetly, cherry"
  */
 
 "use strict";
@@ -15,29 +14,41 @@ let img3;
 let img4;
 let img5;
 
+// declaring counter 
+let counter = 0; 
 
 /**
  * does the setup for canvas 
 */
-function setup() {
+async function setup() {
 createCanvas(225, 225);
 background(245);
+
+//preloads images 
+img1 = await loadImage('assets/images/cherry1.png');
+img2 = await loadImage('assets/images/cherry2.png');
+img3 = await loadImage('assets/images/cherry3.png');
+img4 = await loadImage('assets/images/cherry4.png');
+img5 = await loadImage('assets/images/cherry5.png');
 }
 
 /**
  * draws that thang 
 */
 function draw() {
+    // // draws images 
+    // drawImg(img1);
+    // drawImg(img2);
+    // drawImg(img3);
+    // drawImg(img4);
+    // drawImg(img5);
+
+    // cyles images 
+    cycleImages();
+
     // adds text
     addText1();
     addText2();
-
-    // draws images 
-    drawImg(img1);
-    drawImg(img2);
-    drawImg(img3);
-    drawImg(img4);
-    drawImg(img5);
 }
 
 function addText1(){
@@ -64,4 +75,25 @@ function addText2(){
 
 function drawImg(img){
     image(img, 0, 0, width, height);
+}
+
+function mouseClicked(){
+    counter += 1; 
+    console.log (counter)
+}
+
+function cycleImages(){
+    if(counter === 0){
+        drawImg(img1);
+    } else if(counter === 1){
+        drawImg(img2);
+    } else if(counter === 2){
+        drawImg(img3);
+    } else if(counter === 3){
+        drawImg(img4);
+    } else if(counter === 4){
+        drawImg(img5);
+    } else {
+        counter = 0;
+    }
 }
