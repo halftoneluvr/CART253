@@ -58,17 +58,17 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 
 ## Prototyping Events 
 
-### Dwg1
+### Adorn me
 [View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Events/prototyping-events(dwg1)/)
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Events/prototyping-events(dwg1))
 
-### Dwg2
+### Bounce 
 [View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Events/prototyping-events(dwg2)/)
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Events/prototyping-events(dwg2))
 
-### Dwg3
+### zrób to słodko, wiśnia
 [View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Events/prototyping-events(dwg3)/)
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Events/prototyping-events(dwg3))
