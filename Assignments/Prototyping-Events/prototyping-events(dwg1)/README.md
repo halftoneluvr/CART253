@@ -6,8 +6,9 @@ Owen Dobson
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Added an image for the first time which is sick! 
 
+Wanted to do something simple and play with more arrays and trails. 
 ## Attribution
 
 This bit should attribute any code, assets or other elements used taken from other sources. For example:

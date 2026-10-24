@@ -6,7 +6,9 @@ Owen Dobson
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+Basically paying around with gradients and basic key interactions. 
+
+Not perfect, but any means, but a good intro to fundamental functions on a limited canvas. 
 
 ## Attribution
 
