@@ -111,11 +111,11 @@ function moreText(){
     t += 0.01; 
     // defines text
     fill(255, 255, 255, a);
-    textSize(12.25);                 
+    textSize(12.75);                 
     textFont("Arial");          
     textStyle(NORMAL);     
     textWrap(CHAR);        
     textAlign(CENTER, TOP);
-    text("It feels good to know that I can still taste beyond my past. The tart assault of cherry against the sustenance of wheat and butter. A testament to resourceful people. To questionably balanced people…in fact, at times, tart people; refreshingly so, that is. A capsule of homogeny that threatens to burst at any sentiment of progress. Instead, I know that they will soften over time, ooze juice and combine with sugar, cornstarch, and vanilla. I hope it survives the fire of the stove, and the heats of looming threats. Time will tell. In the meantime, I’ll continue to enjoy my cherries... I love me some cherries, sue me and my babcia" , 0, 0, 225); 
+    text("It feels good to know that I can still taste beyond my past. A sweet pinprick that jolts you back to life. The tart assault of cherry against the sustenance of wheat and butter. A testament to resourceful people. A capsule of homogeny that threatens to burst at any sentiment of progress; this is the precarity of Eastern Europe. I know that they will soften over time, ooze juice and combine with sugar, cornstarch, and vanilla. I hope it survives the fire of the stove, and the heats of looming threats. Time will tell. In the meantime, I’ll continue to enjoy my cherries...", 0, 0, 225); 
     pop();  
 }
