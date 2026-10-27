@@ -73,5 +73,22 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Events/prototyping-events(dwg3))
 
+## Prototyping Functions  
+
+### Dwg 1
+[View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Functions/prototyping-functions(dwg1)/)
+
+[View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Functions/prototyping-functions(dwg1))
+
+### Dwg 2 
+[View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Functions/prototyping-functions(dwg2)/)
+
+[View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Functions/prototyping-functions(dwg2))
+
+### Dwg 3 
+[View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Functions/prototyping-functions(dwg3)/)
+
+[View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Functions/prototyping-functions(dwg3))
+
 ## Reflective Journal
 [Check it out!](Journals/Journal1.md)
