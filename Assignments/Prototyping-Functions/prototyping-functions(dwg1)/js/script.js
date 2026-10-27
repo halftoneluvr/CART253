@@ -7,18 +7,37 @@
  */
 
 "use strict";
-
+let thickness = 1;
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * sets up canvas 
 */
 function setup() {
-
+createCanvas(225, 225);
+background(245);
 }
 
-
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * executes drawing 
 */
 function draw() {
+    // creates text 
+    createText();
+}
 
+function createText(){
+    push();
+    //defines text parameters 
+    fill(0);
+    textSize(36);    
+    stroke(0);   
+    strokeWeight(thickness);          
+    textFont("Comic Sans MS");          
+    textStyle(NORMAL);             
+    textAlign(CENTER, CENTER);
+    text("Witek", width/2, height/2); 
+    // makes it grow 
+    if(thickness < 250){
+        thickness += 0.25; 
+    }
+    pop();  
 }
