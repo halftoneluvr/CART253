@@ -7,8 +7,6 @@
 
 "use strict";
 
-let ball = undefined; // Will create it with createBall()
-
 let balls = [];
 
 /**
@@ -18,18 +16,18 @@ function setup() {
   // Create the canvas
   createCanvas(400, 400);
   // Create the ball
-  ball = createBall();
+  balls.push(createBall(200, 200));
 }
 
 /**
  * Creates a random ball
  */
-function createBall(ball) {
+function createBall(x = 200, y = 200) {
   // Create a ball object with appropriate properties
   const newBall = {
     // Position and dimensions
-    x: 200,
-    y: 200,
+    x: x,
+    y: y,
     size: 20,
     // Colour
     fill: "#36009b",
@@ -47,10 +45,11 @@ function createBall(ball) {
  */
 function draw() {
   background("#cfeb87");
-  
-  moveBall(ball);
-  bounceBall(ball);
-  drawBall(ball);
+  for(let ball of balls){
+    moveBall(ball);
+    bounceBall(ball);
+    drawBall(ball);
+    }
 }
 
 /**
@@ -89,4 +88,9 @@ function drawBall(ball) {
   fill(ball.fill);
   ellipse(ball.x, ball.y, ball.size);
   pop();
+}
+
+function mousePressed(){
+    const newBall = createBall(mouseX, mouseY);
+    balls.push(newBall);
 }
