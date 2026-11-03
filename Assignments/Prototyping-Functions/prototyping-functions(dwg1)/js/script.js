@@ -10,13 +10,15 @@
 /**
  * sets up canvas 
 */
-
 let textObjects = [];
+let lastSpawn = 0;              // when the last object was added 
+const spawnInterval = 2500;     // one second between objects 
+
 function setup() {
 createCanvas(225, 225);
-
+spawnText();
 // creates text objects individually, then stores them 
-textObjects.push(makeTextObject("Witek", width/2, height/2));
+//textObjects.push(makeTextObject("Witek", width/2, height/2));
 }
 
 /**
@@ -25,30 +27,39 @@ textObjects.push(makeTextObject("Witek", width/2, height/2));
 function draw() {
     background(245);
 
+    // adds a new object if one second has passed 
+    if(millis() - lastSpawn >= spawnInterval){
+        spawnText();
+    }
+
     for(let t of textObjects){
         updateText(t);
         drawText(t);
     }
+
+    if (textObjects.length > 30) textObjects.shift(); // limits array 
 }
 
-function makeTextObject(content, x, y, size = 36){
-    return{
-        content: content,
-        x: x,
-        y: y, 
-        size: size, 
-        fill: 0,
+function spawnText(){
+    textObjects.push(({
+        content: "Witek",
+        x: random(20, width - 20),
+        y: random(20, height - 20), 
+        size: 36, 
+        fill: color(random(255), random(255), random(255)),
         stroke: {
-            r: 0, 
-            g: 0,
-            b: 0, 
+            r: random(255), 
+            g: random(255),
+            b: random(255), 
             a: 255
         },
         thickness: 1,
         maxThickness: 250, 
         vel: 0.001,
         acc: 0.0015
-    };
+    }));
+
+    lastSpawn = millis(); 
 }
 
 function updateText(t){
@@ -70,49 +81,3 @@ function drawText(t){
     text(t.content, t.x, t.y);
     pop(); 
 }
-
-
-
-
-
-
-
-// function createText(textObject){
-//     push();
-//     //defines text parameters 
-//     fill(0);
-//     textSize(36);    
-//     stroke(textObject.fill.r, textObject.fill.g, textObject.fill.b, textObject.fill.a);   
-//     strokeWeight(textObject.thickness);          
-//     textFont("Comic Sans MS");          
-//     textStyle(NORMAL);             
-//     textAlign(CENTER, CENTER);
-//     text("Witek", width/2, height/2); 
-//     // makes it grow 
-//     if(textObject.thickness < 250){
-//         textObject.thickness +=  textObject.vel;
-//         textObject.vel +=  textObject.acc; 
-//     }
-//     // adjusts fill 
-//     // if(textObject.fill.r < 255){
-//     //     textObject.fill.r += 0.1; 
-//     //     textObject.fill.g += 0.1; 
-//     //     textObject.fill.b += 0.1; 
-        
-//     // }
-//     pop();  
-// }
-
-// function makeTextObject(textObject){
-//     let textObject = {
-//         thickness: 1,
-//         fill: {
-//             r: 0, 
-//             g: 0,
-//             b: 0,
-//             a: 250
-//         },
-//         vel: 0.001,
-//         acc: 0.0015
-//     };
-// }
