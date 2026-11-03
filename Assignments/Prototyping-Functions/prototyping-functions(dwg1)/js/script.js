@@ -17,15 +17,13 @@ const spawnInterval = 2500;     // one second between objects
 function setup() {
 createCanvas(225, 225);
 spawnText();
-// creates text objects individually, then stores them 
-//textObjects.push(makeTextObject("Witek", width/2, height/2));
 }
 
 /**
  * executes drawing 
 */
 function draw() {
-    background(245);
+    background(255);
 
     // adds a new object if one second has passed 
     if(millis() - lastSpawn >= spawnInterval){
@@ -37,14 +35,14 @@ function draw() {
         drawText(t);
     }
 
-    if (textObjects.length > 30) textObjects.shift(); // limits array 
+    if (textObjects.length > 25) textObjects.shift(); // limits array 
 }
 
 function spawnText(){
     textObjects.push(({
         content: "Witek",
-        x: random(20, width - 20),
-        y: random(20, height - 20), 
+        x: random(0, width),
+        y: random(0, height), 
         size: 36, 
         fill: color(random(255), random(255), random(255)),
         stroke: {
