@@ -10,6 +10,7 @@
 
 let objects = []; 
 
+
 // sets up canvas and background 
 function setup() {
 createCanvas(225, 225); 
@@ -21,7 +22,9 @@ function draw(){
     spawnObject();
     
     for(let t of objects){
-        drawObject(t);
+        if(mouseIsPressed){
+            drawObject(t);
+        };
     };
 }
 
