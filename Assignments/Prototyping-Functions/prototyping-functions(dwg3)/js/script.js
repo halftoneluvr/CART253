@@ -12,7 +12,8 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
-
+createCanvas(225, 225); 
+background(245);
 }
 
 

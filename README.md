@@ -75,7 +75,7 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 
 ## Prototyping Functions  
 
-### Dwg 1
+### "Witek"
 [View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Functions/prototyping-functions(dwg1)/)
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Functions/prototyping-functions(dwg1))
