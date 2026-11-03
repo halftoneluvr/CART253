@@ -80,7 +80,7 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Functions/prototyping-functions(dwg1))
 
-### Dwg 2 
+### Swells over Yonder 
 [View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Functions/prototyping-functions(dwg2)/)
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Functions/prototyping-functions(dwg2))
