@@ -12,7 +12,7 @@
 */
 let textObjects = [];
 let lastSpawn = 0;              // when the last object was added 
-const spawnInterval = 100;     // one second between objects 
+const spawnInterval = 100;     // one tenth of a second between objects 
 
 function setup() {
 createCanvas(225, 225);
@@ -35,6 +35,10 @@ function draw() {
     }
 
     if (textObjects.length > 25) textObjects.shift(); // limits array 
+
+    filter(BLUR, 1); // adds blue bc I just love blur lol 
+    filter(POSTERIZE, 50);
+
 }
 
 function spawnText(){
