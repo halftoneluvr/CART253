@@ -30,8 +30,12 @@ function draw(){
 
     // creating limits for the program (also preventing lagging & 
     // making program a lot smaller lol)
-    frameRate(30);
-    //if (objects.length > 25) objects.shift();
+    frameRate(20);
+    if (objects.length > 25) objects.shift();
+    
+    // filters 
+    filter(POSTERIZE, 50);
+    filter(ERODE);
 }
 
 function spawnObject() {
@@ -59,8 +63,13 @@ function drawObject(t){
 }
 
 function createGrowths(){
+    let stepDistance = 5; 
+
     for (let t of objects){
-        t.x += random(-5, 5);
-        t.y += random(-5, 5);
+        let stepIndex = floor(random(0,8));
+        let angle = stepIndex * QUARTER_PI;
+
+        t.x += cos(angle) * stepDistance; 
+        t.y += sin(angle) * stepDistance; 
     }
 }
