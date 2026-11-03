@@ -12,10 +12,11 @@
 */
 let textObjects = [];
 let lastSpawn = 0;              // when the last object was added 
-const spawnInterval = 2500;     // one second between objects 
+const spawnInterval = 100;     // one second between objects 
 
 function setup() {
 createCanvas(225, 225);
+background(255);
 spawnText();
 }
 
@@ -23,8 +24,6 @@ spawnText();
  * executes drawing 
 */
 function draw() {
-    background(255);
-
     // adds a new object if one second has passed 
     if(millis() - lastSpawn >= spawnInterval){
         spawnText();
