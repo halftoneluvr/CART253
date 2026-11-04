@@ -14,6 +14,7 @@ let objects = [];
 function setup() {
 createCanvas(225, 225); 
 background(245);
+makeText();
 }
 
 // draws lol
@@ -72,4 +73,17 @@ function createGrowths(){
         t.x += cos(angle) * stepDistance; 
         t.y += sin(angle) * stepDistance; 
     }
+}
+
+function makeText(){
+    push();
+    fill(0);
+    stroke(0);
+    strokeWeight(0);
+    textSize(36);
+    textFont("Comic Sans MS");
+    textStyle(NORMAL);
+    textAlign(CENTER, CENTER);
+    text("Touch me", width/2, height/2);
+    pop(); 
 }
