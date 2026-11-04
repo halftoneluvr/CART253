@@ -12,32 +12,32 @@ let textObjects = [];
 
 // defines alphabet 
 const words = {
-    a: apathy,
-    b: bewilder,
-    c: crave,
-    d: disdain, 
-    e: emphatic, 
-    f: foresight,
-    g: goblin,
-    h: heliotrope,
-    i: iterate,
-    j: julienne, 
-    k: koch, 
-    l: lament, 
-    m: mouthy, 
-    n: negate, 
-    o: orthographic, 
-    p: pneuma, 
-    q: quanta,
-    r: required, 
-    s: suppose, 
-    t: tonic,
-    u: utero, 
-    v: vestigial,
-    w: wanton, 
-    x: xavier, 
-    y: yelp, 
-    z: zenith 
+    a: "apathy",
+    b: "bewilder",
+    c: "crave",
+    d: "disdain", 
+    e: "emphatic", 
+    f: "foresight",
+    g: "goblin",
+    h: "heliotrope",
+    i: "iterate",
+    j: "julienne", 
+    k: "koch", 
+    l: "lament", 
+    m: "mouthy", 
+    n: "negate", 
+    o: "orthographic", 
+    p: "pneuma", 
+    q: "quanta",
+    r: "required", 
+    s: "suppose", 
+    t: "tonic",
+    u: "utero", 
+    v: "vestigial",
+    w: "wanton", 
+    x: "xavier", 
+    y: "yelp", 
+    z: "zenith" 
 }
 
 /**
@@ -45,7 +45,6 @@ const words = {
 */
 function setup() {
 createCanvas(225, 225); 
-background(245);
 }
 
 
@@ -53,17 +52,17 @@ background(245);
  * Executes drawing 
 */
 function draw() {
-    //spawnText();
+    background(245);
 
     for(let t of textObjects){
         drawText(t);
     }
 }
 
-function spawnText(){
+function spawnText(word){
     textObjects.push({  
-        content: "Witek",
-        x: random(0, width),
+        content: word,
+        x: random(15, width - 15),
         y: random(0, height), 
         size: 24, 
         fill: {
@@ -94,8 +93,10 @@ function drawText(t){
     pop(); 
 }
 
-function keyPressed(t){
-    if(key === 't'){
+function keyPressed(){
+    let word = words[key.toLowerCase()]; // accounts for caplocks 
 
+    if (word){
+        spawnText(word);
     }
 }
