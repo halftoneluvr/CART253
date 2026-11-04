@@ -85,7 +85,7 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Functions/prototyping-functions(dwg2))
 
-### Dwg 3 
+### Type my ABCs 
 [View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Functions/prototyping-functions(dwg3)/)
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Functions/prototyping-functions(dwg3))
