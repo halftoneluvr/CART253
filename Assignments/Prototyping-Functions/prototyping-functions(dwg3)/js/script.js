@@ -37,7 +37,7 @@ const words = {
     w: "wanton", 
     x: "xavier", 
     y: "yelp", 
-    z: "zenith" 
+    z: "zenith"
 }
 
 /**
@@ -52,18 +52,21 @@ createCanvas(225, 225);
  * Executes drawing 
 */
 function draw() {
-    background(245);
+    background(255);
+    instructionsText();
 
     for(let t of textObjects){
         drawText(t);
     }
+
+    if (textObjects.length > 26) textObjects.shift();   
 }
 
 function spawnText(word){
     textObjects.push({  
         content: word,
-        x: random(15, width - 15),
-        y: random(0, height), 
+        x: random(width),
+        y: random([10, 35, 60, 85, 110, 135, 160, 185, 210]), 
         size: 24, 
         fill: {
             r: random(255), 
@@ -99,4 +102,20 @@ function keyPressed(){
     if (word){
         spawnText(word);
     }
+    if (key === 'Enter'){
+        textObjects.length = 0;
+    }
+
+}
+
+function instructionsText(){
+    push();
+    fill(0);
+    noStroke();
+    textSize(24);
+    textFont("Times New Roman");
+    textStyle(NORMAL);
+    textAlign(CENTER, CENTER);
+    text("test", width/2, height/2);
+    pop(); 
 }
