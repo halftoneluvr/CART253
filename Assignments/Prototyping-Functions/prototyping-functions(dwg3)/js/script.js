@@ -8,7 +8,9 @@
 
 "use strict";
 
-let textObjects = [];
+let textObjects = []; // array for objects 
+
+let showInstructions = true; // Boolean for instructions 
 
 // defines alphabet 
 const words = {
@@ -53,10 +55,14 @@ createCanvas(225, 225);
 */
 function draw() {
     background(255);
-    instructionsText();
+    
+    if(showInstructions){
+        instructionsText();
+    }
 
     for(let t of textObjects){
         drawText(t);
+        scale(map(sin(frameCount * 0.005), -1, 1, 0.8, 1.2));
     }
 
     if (textObjects.length > 26) textObjects.shift();   
@@ -96,18 +102,6 @@ function drawText(t){
     pop(); 
 }
 
-function keyPressed(){
-    let word = words[key.toLowerCase()]; // accounts for caplocks 
-
-    if (word){
-        spawnText(word);
-    }
-    if (key === 'Enter'){
-        textObjects.length = 0;
-    }
-
-}
-
 function instructionsText(){
     push();
     fill(0);
@@ -116,6 +110,19 @@ function instructionsText(){
     textFont("Times New Roman");
     textStyle(NORMAL);
     textAlign(CENTER, CENTER);
-    text("test", width/2, height/2);
+    text("type", width/2, height/2);
     pop(); 
+}
+
+function keyPressed(){
+    showInstructions = false; // removes instructions 
+
+    let word = words[key.toLowerCase()]; // accounts for caplocks 
+
+    if (word){
+        spawnText(word);
+    }
+    if (key === 'Enter'){
+        textObjects.length = 0;
+    }
 }
