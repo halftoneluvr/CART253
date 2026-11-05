@@ -27,7 +27,7 @@ function setup() {
     colorMode(HSB, 100);
 
     for (let i = 0; i <= width; i++) {
-        let hueValue = map(i, 0, width, 67, 33);
+        let hueValue = map(i, 0, width, 77, 95);
             stroke(hueValue, 100, 100);
             line(i, 0, i, y);
     }
