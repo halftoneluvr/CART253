@@ -7,11 +7,31 @@
 
 "use strict";
 
+let strokeValue = 0;
+let x = 0;
+let y = undefined;
+let xTwo = undefined;
+let yTwo = 0;
+
+
 /**
  * Creates the canvas
  */
 function setup() {
     createCanvas(500, 500);
+    y = height; 
+    xTwo = width; 
+
+    push();
+    // Use HSB color with values in the range 0-100.
+    colorMode(HSB, 100);
+
+    for (let i = 0; i <= width; i++) {
+        let hueValue = map(i, 0, width, 67, 33);
+            stroke(hueValue, 100, 100);
+            line(i, 0, i, y);
+    }
+    pop();
 }
 
 /**
@@ -19,38 +39,29 @@ function setup() {
  * gradually lightening colour
  */
 function draw() {
-    background("pink");
+    //background("lightgoldenrodyellow");
     
-    stroke(0);
-    line(0, 0, 0, height);
-    
-    stroke(25);
-    line(50, 0, 50, height);
-    
-    stroke(50);
-    line(100, 0, 100, height);
-    
-    stroke(75);
-    line(150, 0, 150, height);
-    
-    stroke(100);
-    line(200, 0, 200, height);
-    
-    stroke(125);
-    line(250, 0, 250, height);
-    
-    stroke(150);
-    line(300, 0, 300, height);
-    
-    stroke(175);
-    line(350, 0, 350, height);
-    
-    stroke(200);
-    line(400, 0, 400, height);
-    
-    stroke(225);
-    line(450, 0, 450, height);
-    
-    stroke(250);
-    line(500, 0, 500, height);
+    strokeValue = 0;
+    x = 0;
+
+    // verticle 
+    while(strokeValue <= 255){
+        strokeValue += 25; 
+        x += 50;
+        
+        stroke(strokeValue);
+        line(x, 0, x, y);
+    }
+
+    // horizontal 
+    strokeValue = 0;
+    yTwo = 0;
+
+    while(strokeValue <= 255){
+        strokeValue += 25;
+        yTwo += 50;
+
+        stroke(strokeValue);
+        line(0, yTwo, xTwo, yTwo);
+    }
 }

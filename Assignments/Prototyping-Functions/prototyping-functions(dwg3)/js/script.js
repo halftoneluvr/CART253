@@ -110,7 +110,7 @@ function instructionsText(){
     textFont("Times New Roman");
     textStyle(NORMAL);
     textAlign(CENTER, CENTER);
-    text("type", width/2, height/2);
+    text("type, if you please", width/2, height/2);
     pop(); 
 }
 
