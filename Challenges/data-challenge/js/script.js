@@ -2,68 +2,58 @@
  * Data Challenge 
  * Owen Dobson 
  * 
- * This is the inclass data challenge 
+ * This is the in-class data challenge 
  */
+
+// * Uses:
+//  * Darius Kazemi's corpora repository
+//  * https://github.com/dariusk/corpora/tree/master
+//  */
 
 "use strict";
 
+let carData = undefined;
+let dinosaurData = undefined;
+let langData = undefined;
+let lang = "fr";
 
-
-async function setup() {
-
-    createCanvas(500, 500);
-    let jsonData = await loadJSON("assets/data/flowers.json");
-}
-
+// Starts with the instruction
+let carName = "Click to generate a car name.";
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Load the car and dinosaur data
+ */
+async function preload() {
+    carData = await loadJSON("assets/data/cars.json");
+    dinosaurData = await loadJSON("assets/data/dinosaurs.json");
+}
+
+/**
+ * Create the canvas
+*/
+async function setup() {
+    createCanvas(600, 400);
+    
+    await preload();
+}
+
+/**
+ * Display the current main text (either instructions or a car)
 */
 function draw() {
-    background('mediumturquoise');
-    //stem
-    push();
-    noStroke();
-    fill(flowerOne.fillStem);
-    rect(flowerOne.x, flowerOne.y, flowerOne.width, flowerOne.f2_height);
-    pop();
-    //petal 
-    push();
-    strokeWeight(4);
-    stroke(flowerOne.strokePetal);
-    fill(flowerOne.fillPetal);
-    ellipse(flowerOne.x + flowerOne.width/2, flowerOne.y - flowerOne.petal_width.width/2, flowerOne.petal_width);
+    background(0);
 
-    //stem
     push();
-    noStroke();
-    fill(flowerOne.fillStem);
-    rect(flowerOne.x, flowerOne.y, flowerOne.width, flowerOne.f2_height);
-    pop();
-    //petal 
-    push();
-    strokeWeight(4);
-    stroke(flowerOne.strokePetal);
-    fill(flowerOne.fillPetal);
-    ellipse(flowerOne.x + flowerOne.width/2, flowerOne.y - flowerOne.petal_width.width/2, flowerOne.petal_width);
-    pop();
-
-    //stem
-    push();
-    noStroke();
-    fill(flowerOne.fillStem);
-    rect(flowerOne.x, flowerOne.y, flowerOne.width, flowerOne.f2_height);
-    pop();
-    //petal 
-    push();
-    strokeWeight(4);
-    stroke(flowerOne.strokePetal);
-    fill(flowerOne.fillPetal);
-    ellipse(flowerOne.x + flowerOne.width/2, flowerOne.y - flowerOne.petal_width.width/2, flowerOne.petal_width);
+    fill("pink");
+    textAlign(CENTER, CENTER);
+    textSize(32);
+    text(carName, width / 2, height / 2);
     pop();
 }
 
-function drawFlower(flower){
-    push();
-    noStroke  
+/**
+ * Generate a new car name
+ */
+function mousePressed() {
+    carName = random(carData.cars) + " " + random(dinosaurData.dinosaurs);
 }
