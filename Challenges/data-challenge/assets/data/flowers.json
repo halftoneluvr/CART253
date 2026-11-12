@@ -1,0 +1,38 @@
+{
+    "flowers":[
+        {
+            "x": 100,
+            "width": 20,
+            "height": 250,
+            "y": 350,
+            "petal_width": 75,
+            "fillStem":"DarkMagenta",
+            "strokePetal":"DarkOrchid",
+            "fillPetal":"deepPink"
+        },
+        {
+            "x": 200,
+            "width": 20,
+            "height": 250,
+            "y": 300,
+            "petal_width": 60,
+            "fillStem":"DarkMagenta",
+            "strokePetal":"cyan",
+            "fillPetal":"blue"
+        },
+        {
+            "x": 400,
+            "width": 20,
+            "height": 250,
+            "y": 380,
+            "petal_width": 85,
+            "fillStem":"DarkMagenta",
+            "strokePetal":"purple",
+            "fillPetal":"yellow"
+        }
+    ]
+
+
+
+
+}
