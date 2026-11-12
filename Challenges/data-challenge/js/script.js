@@ -29,7 +29,7 @@ async function preload() {
 }
 
 /**
- * Create the canvas
+ * Create the canvas  
 */
 async function setup() {
     createCanvas(600, 400);
