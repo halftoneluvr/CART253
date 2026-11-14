@@ -19,7 +19,7 @@ let img5;
 */
 async function setup() {
     createCanvas(225, 225, WEBGL); 
-    background(245);
+    background(255);
 
     //loading images 
     img1 = await
@@ -37,15 +37,13 @@ async function setup() {
     translate(-width/2, -height/2); // accounts for WEBGL origin
     // draws "walls"
     addWalls();
-
 }
-
 
 /**
  * executes drawing 
 */
 function draw() {
-   
+    
 }
 
 function addWalls(){
@@ -87,6 +85,5 @@ function addWalls(){
      vertex(2*width/3, 2*height/3, 1, 1);
     vertex(width/3, 2*height/3, 0, 1);
     endShape(CLOSE);
-
     pop();
 }
