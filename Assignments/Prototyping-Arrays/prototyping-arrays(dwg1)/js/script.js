@@ -9,6 +9,10 @@
 "use strict";
 
 let img1;
+let img2; 
+let img3; 
+let img4; 
+let img5; 
 
 /**
  * sets up canvas 
@@ -19,8 +23,20 @@ async function setup() {
 
     //loading images 
     img1 = await
+    loadImage('assets/images/RIMG0718.JPG')
+    img2 = await
+    loadImage('assets/images/RIMG0715.JPG')
+    img3 = await
+    loadImage('assets/images/RIMG0714.JPG')
+    img4 = await
+    loadImage('assets/images/RIMG0713.JPG')
+    img5 = await
     loadImage('assets/images/RIMG0711.JPG')
    
+    // places the images
+    translate(-width/2, -height/2); // accounts for WEBGL origin
+    // draws "walls"
+    addWalls();
 
 }
 
@@ -29,16 +45,14 @@ async function setup() {
  * executes drawing 
 */
 function draw() {
-    translate(-width/2, -height/2); // accounts for WEBGL origin
-    // draws "walls"
-    addWalls();
+   
 }
 
 function addWalls(){
     push();
     noStroke();
     //left 
-    texture(img1);
+    texture(img5);
     textureMode(NORMAL);
     beginShape();
     vertex(0, 0, 0, 0);  
@@ -47,29 +61,31 @@ function addWalls(){
     vertex(0, height, 0, 1);
     endShape(CLOSE);
     //top
+    texture(img3);
+    textureMode(NORMAL);
     beginShape();
-    fill(80);
-    vertex(0, 0);
-    vertex(width, 0);
-    vertex(2*width/3, height/3);
-    vertex(width/3, height/3);
-
+    vertex(0, 0, 0, 0);
+    vertex(width, 0, 1, 0);
+    vertex(2*width/3, height/3, 1, 1);
+    vertex(width/3, height/3, 0, 1);
     endShape(CLOSE);
     //right
+    texture(img4);
+    textureMode(NORMAL);
     beginShape();
-    fill(130);
-    vertex(width, 0);
-    vertex(width, height);
-    vertex(2*width/3, 2*height/3);
-    vertex(2*width/3, height/3);
+    vertex(width, 0, 1, 1);
+    vertex(width, height, 1, 0);
+    vertex(2*width/3, 2*height/3, 0, 0);
+    vertex(2*width/3, height/3, 0, 1 );
     endShape(CLOSE);
     //bottom
+    texture(img2);
+    textureMode(NORMAL);
     beginShape();
-    fill(38);
-    vertex(0, height);
-    vertex(width, height);
-     vertex(2*width/3, 2*height/3);
-    vertex(width/3, 2*height/3);
+    vertex(0, height, 0, 0);
+    vertex(width, height, 1, 0);
+     vertex(2*width/3, 2*height/3, 1, 1);
+    vertex(width/3, 2*height/3, 0, 1);
     endShape(CLOSE);
 
     pop();
