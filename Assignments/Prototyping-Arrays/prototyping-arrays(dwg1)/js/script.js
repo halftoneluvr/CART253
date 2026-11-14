@@ -30,34 +30,38 @@ function draw() {
 function addWalls(){
     push();
     noStroke();
-    fill(30);
     //left 
     beginShape();
+    fill(200);
     vertex(0, 0);
-    vertex(0, height);
     vertex(width/3, height/3);
     vertex(width/3, 2*height/3);
+    vertex(0, height);
     endShape(CLOSE);
     //top
     beginShape();
+    fill(80);
     vertex(0, 0);
     vertex(width, 0);
-    vertex(width/3, height/3);
     vertex(2*width/3, height/3);
+    vertex(width/3, height/3);
+
     endShape(CLOSE);
     //right
     beginShape();
+    fill(130);
     vertex(width, 0);
     vertex(width, height);
-    vertex(2*width/3, height/3);
     vertex(2*width/3, 2*height/3);
+    vertex(2*width/3, height/3);
     endShape(CLOSE);
     //bottom
     beginShape();
+    fill(38);
     vertex(0, height);
     vertex(width, height);
+     vertex(2*width/3, 2*height/3);
     vertex(width/3, 2*height/3);
-    vertex(2*width/3, 2*height/3);
     endShape(CLOSE);
 
     pop();
