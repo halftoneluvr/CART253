@@ -14,6 +14,13 @@ let img3;
 let img4; 
 let img5; 
 
+let textSettings ={
+    x: undefined,
+    y: undefined,
+    size: 32,
+
+}
+
 /**
  * sets up canvas 
 */
@@ -43,7 +50,8 @@ async function setup() {
  * executes drawing 
 */
 function draw() {
-    
+    translate(-width/2, -height/2);
+    textBox();
 }
 
 function addWalls(){
@@ -85,5 +93,29 @@ function addWalls(){
      vertex(2*width/3, 2*height/3, 1, 1);
     vertex(width/3, 2*height/3, 0, 1);
     endShape(CLOSE);
+    pop();
+}
+
+function textBox(){
+    //blackbox
+    push();
+    fill(0);
+    noStroke();
+    rect(width-45, height-15, 40, 10);
+    pop();
+    //whitebox
+    push();
+    fill(255);
+    noStroke();
+    rect(width-65, height-15, 20, 10);
+    pop();
+    //text
+    push();
+    textFont('ARIAL');
+    textSize(5);
+    fill(0);
+    noStroke();
+    textAlign(LEFT, CENTER);
+    text('type:', width-64, height-10);
     pop();
 }
