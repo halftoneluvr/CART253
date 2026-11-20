@@ -14,12 +14,16 @@ let img3;
 let img4; 
 let img5; 
 
-let textSettings ={
+let box ={
     x: undefined,
-    y: undefined,
-    size: 32,
+    y:undefined,
+    sizeX: undefined,
+    sizeY: undefined,
+    fill: 255
+};
 
-}
+let isDrawing = false; 
+let boxes=[];
 
 /**
  * sets up canvas 
@@ -39,19 +43,37 @@ async function setup() {
     loadImage('assets/images/RIMG0713.JPG')
     img5 = await
     loadImage('assets/images/RIMG0711.JPG')
-   
-    // places the images
-    translate(-width/2, -height/2); // accounts for WEBGL origin
-    // draws "walls"
-    addWalls();
 }
 
 /**
  * executes drawing 
 */
 function draw() {
-    translate(-width/2, -height/2);
-    textBox();
+    background(255);
+    push();
+    translate(-width/2, -height/2); // accounts for WEBGL origin
+    // draws "walls"
+    addWalls();
+    pop();
+
+    // Draw saved boxes
+    for(const b of boxes){
+        drawBox(b);
+    }
+
+    // draws when mouse is held down 
+    if (isDrawing){
+        drawBox(box);
+    }
+}
+
+function drawBox(b){
+    if (b.x === undefined || b.y === undefined) return; 
+    push();
+    fill(b.fill);
+    stroke(0);
+    rect(b.x, b.y, b.sizeX, b. sizeY);
+    pop();
 }
 
 function addWalls(){
@@ -96,26 +118,33 @@ function addWalls(){
     pop();
 }
 
-function textBox(){
-    //blackbox
-    push();
-    fill(0);
-    noStroke();
-    rect(width-45, height-15, 40, 10);
-    pop();
-    //whitebox
-    push();
-    fill(255);
-    noStroke();
-    rect(width-65, height-15, 20, 10);
-    pop();
-    //text
-    push();
-    textFont('ARIAL');
-    textSize(5);
-    fill(0);
-    noStroke();
-    textAlign(LEFT, CENTER);
-    text('type:', width-64, height-10);
-    pop();
+function mousePressed(){
+    box.x = mouseX - width/2;
+    box.y = mouseY - height/2; 
+    box.sizeX = 0; 
+    box.sizeY = 0;
+    isDrawing = true; 
+}
+
+function mouseDragged(){
+    if (!isDrawing)return;
+    const currentX = mouseX - width/2;
+    const currentY = mouseY - height/2; 
+    box.sizeX = currentX - box.x;
+    box.sizeY = currentY - box.y; 
+}
+
+function mouseReleased(){
+    if (!isDrawing) return;
+    isDrawing = false; 
+
+    if (Math.abs(box.sizeX) > 1 && Math.abs(box.sizeY) > 1){
+        boxes.push({
+            x: box.x,
+            y: box.y,
+            sizeX: box.sizeX,
+            sizeY: box.sizeY,
+            fill: box.fill
+        });
+    }
 }
