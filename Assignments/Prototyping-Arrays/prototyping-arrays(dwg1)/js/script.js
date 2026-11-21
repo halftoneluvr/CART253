@@ -20,12 +20,14 @@ let box ={
     sizeX: undefined,
     sizeY: undefined,
     fill: {
-        r: 255,
-        g: 255,
-        b: 255,
+        r: 0,
+        g: 0,
+        b: 0,
         a: 100
     }
 };
+
+const shrinkSpeed = 0.001; 
 
 let isDrawing = false; 
 let boxes=[];
@@ -70,6 +72,8 @@ function draw() {
     if (isDrawing){
         drawBox(box);
     }
+
+    shrinkBoxes();
 }
 
 function drawBox(b){
@@ -149,7 +153,46 @@ function mouseReleased(){
             y: box.y,
             sizeX: box.sizeX,
             sizeY: box.sizeY,
-            fill: box.fill
+            // records originla coordinates 
+            startCX: box.x + box.sizeX /2,
+            startCY: box.y + box.sizeY /2,
+            startW: box.sizeX,
+            startH: box.sizeY,
+            t: 0,
+            fill:{
+                r: box.fill.r,
+                g: box.fill.g, 
+                b: box.fill.b, 
+                a: box.fill.a
+            }
         });
     }
+}
+
+function shrinkBoxes(){
+    for (let i = boxes.length - 1; i >= 0; i--) {
+            const b = boxes[i];
+
+            b.t += shrinkSpeed;
+
+            // removes boxes that reach the center 
+            if (b.t >= 1) {
+                boxes.splice(i, 1);
+                continue;
+            }
+
+            const remaining = 1 - b.t; // goes from 1 down to 0
+
+            // moves to 0,0 in WEBL 
+            const cx = b.startCX * remaining;
+            const cy = b.startCY * remaining;
+
+            // uniform scale factor 
+            b.sizeX = b.startW * remaining;
+            b.sizeY = b.startH * remaining;
+
+            // accounts for rect() center
+            b.x = cx - b.sizeX / 2;
+            b.y = cy - b.sizeY / 2;
+        }
 }
