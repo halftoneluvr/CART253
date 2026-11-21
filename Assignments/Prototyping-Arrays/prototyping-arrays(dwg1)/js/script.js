@@ -19,7 +19,12 @@ let box ={
     y:undefined,
     sizeX: undefined,
     sizeY: undefined,
-    fill: 255
+    fill: {
+        r: 255,
+        g: 255,
+        b: 255,
+        a: 100
+    }
 };
 
 let isDrawing = false; 
@@ -70,8 +75,8 @@ function draw() {
 function drawBox(b){
     if (b.x === undefined || b.y === undefined) return; 
     push();
-    fill(b.fill);
-    stroke(0);
+    fill(b.fill.r, b.fill.g, b.fill.b, b.fill.a);
+    noStroke();
     rect(b.x, b.y, b.sizeX, b. sizeY);
     pop();
 }
