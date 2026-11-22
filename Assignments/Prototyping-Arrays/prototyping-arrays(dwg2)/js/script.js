@@ -28,9 +28,8 @@ async function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-
-}
-
-function drawTriangles(){
-
+    push();
+    stroke('red');
+    point(180, 48);
+    pop();
 }
