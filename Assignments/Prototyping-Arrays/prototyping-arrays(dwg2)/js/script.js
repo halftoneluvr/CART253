@@ -43,12 +43,12 @@ function draw() {
 
     // test for proximity to origin 
     const d = dist(mouseX, mouseY, origin.x, origin.y);
-    const target = 1 - constrain(d / reach, 0, 1);
-    distFromOrigin = lerp(distFromOrigin, target, 0.05);
+    const target = constrain(d / reach, 0, 1);
+    distFromOrigin = lerp(distFromOrigin, target, 0.075);
 
     // distFromOrigin controls size and spread
-    const armLength = map(distFromOrigin, 0, 1, 10, 80);
-    const spread = map(distFromOrigin, 0, 1, 10, 70); 
+    const armLength = map(distFromOrigin, 0, 1, 10, 40);
+    const spread = map(distFromOrigin, 0, 1, 10, 25); 
 
     // creating the four arms 
     for(let i = 0; i < 8; i++){
@@ -69,13 +69,13 @@ function branch(len, depth, spread){
     // right 
     push();
     rotate(spread);
-    branch(len*0.6, depth - 1, spread);
+    branch(len*0.3, depth - 1, spread);
     pop();
 
     // left 
     push();
     rotate(-spread);
-    branch(len*0.9, depth - 1, spread);
+    branch(len*1.2, depth - 1, spread);
     pop();
 }
 
