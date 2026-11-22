@@ -12,13 +12,13 @@ let img;
 
 let origin;
 let distFromOrigin = 0;
-const reach = 200;
-const maxDepth = 7;
+const reach = 225;
+const maxDepth = 8;
 /**
  * sets it up
 */
 async function setup() {
-     createCanvas(225, 225);
+    createCanvas(225, 225);
     background(245);
     
     // setting up image 
@@ -39,21 +39,22 @@ async function setup() {
 */
 function draw() {
     image(img, 0, 0, 225, 225);
+    stroke(255, 255, 255, 50);
 
     // test for proximity to origin 
     const d = dist(mouseX, mouseY, origin.x, origin.y);
     const target = 1 - constrain(d / reach, 0, 1);
-    distFromOrigin = lerp(distFromOrigin, target, 0.08);
+    distFromOrigin = lerp(distFromOrigin, target, 0.05);
 
     // distFromOrigin controls size and spread
-    const armLength = map(distFromOrigin, 0, 1, 10, 60);
-    const spread = map(distFromOrigin, 0, 1, 10, 55); 
+    const armLength = map(distFromOrigin, 0, 1, 10, 80);
+    const spread = map(distFromOrigin, 0, 1, 10, 70); 
 
     // creating the four arms 
-    for(let i = 0; i < 4; i++){
+    for(let i = 0; i < 8; i++){
        push();
         translate(origin.x, origin.y);
-        rotate(i * 90);
+        rotate(i * 45);
         branch(armLength, maxDepth, spread); 
         pop(); 
     }
@@ -63,19 +64,18 @@ function branch(len, depth, spread){
     if(depth === 0) return;
 
     line(0, 0, 0, -len);
+    translate(0, -len);
 
     // right 
     push();
     rotate(spread);
-    branch(len*0.72, depth - 1, spread);
+    branch(len*0.6, depth - 1, spread);
     pop();
 
     // left 
     push();
     rotate(-spread);
-    branch(len*0.72, depth - 1, spread);
+    branch(len*0.9, depth - 1, spread);
     pop();
-
-
 }
 
