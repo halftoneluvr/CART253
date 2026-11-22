@@ -90,5 +90,22 @@ Hello, welcome to my first website! Info you will find on here should consist mo
 
 [View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Functions/prototyping-functions(dwg3))
 
+## Prototyping Arrays 
+
+### Passing Thru 
+[View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Arrays/prototyping-arrays(dwg1)/)
+
+[View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Arrays/prototyping-arrays(dwg1))
+
+### "Wheat in the city"
+[View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Arrays/prototyping-arrays(dwg2)/)
+
+[View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Arrays/prototyping-arrays(dwg2))
+
+### TBD
+[View Online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Arrays/prototyping-arrays(dwg3)/)
+
+[View Code](https://github.com/halftoneluvr/CART253/tree/main/Assignments/Prototyping-Arrays/prototyping-arrays(dwg3))
+
 ## Reflective Journal
 [Check it out!](Journals/Journal1.md)
