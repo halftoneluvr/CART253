@@ -5,8 +5,8 @@ Owen Dobson
 [View this project online](https://halftoneluvr.github.io/CART253/Assignments/Prototyping-Arrays/prototyping-arrays(dwg1))
 
 ## Description
-
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+  
+Boxes are draw and sent off into oblivion 
 
 ## Attribution
 

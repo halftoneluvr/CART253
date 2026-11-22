@@ -8,11 +8,19 @@
 
 "use strict";
 
+let img;
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * sets it up
 */
-function setup() {
+async function setup() {
+    img = await
+    loadImage('assets/images/maybeCar.png');
+    
+    createCanvas(225, 225);
+    background(245);
 
+   
+    image(img, 0, 0, 225, 225);
 }
 
 
@@ -20,5 +28,9 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+
+}
+
+function drawTriangles(){
 
 }
