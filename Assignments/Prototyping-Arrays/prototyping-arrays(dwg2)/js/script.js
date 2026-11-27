@@ -37,6 +37,11 @@ async function setup() {
 /**
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
+
+let armLength = 10; 
+let spread = 10;
+let savedTrees= []; 
+
 function draw() {
     image(img, 0, 0, 225, 225);
     stroke(255, 255, 255, 50);
@@ -47,15 +52,23 @@ function draw() {
     distFromOrigin = lerp(distFromOrigin, target, 0.075);
 
     // distFromOrigin controls size and spread
-    const armLength = map(distFromOrigin, 0, 1, 10, 40);
-    const spread = map(distFromOrigin, 0, 1, 10, 25); 
+    armLength = map(distFromOrigin, 0, 1, 10, 40);
+    spread = map(distFromOrigin, 0, 1, 10, 25); 
 
     // creating the four arms 
-    for(let i = 0; i < 8; i++){
+    for(let t of savedTrees) drawTree(t.armLength, t.spread);
+
+    // draws currewnt tree
+    drawTree(armLength, spread);
+    
+}
+
+function drawTree(len, spr){
+   for(let i = 0; i < 8; i++){
        push();
         translate(origin.x, origin.y);
         rotate(i * 45);
-        branch(armLength, maxDepth, spread); 
+        branch(len, maxDepth, spr); 
         pop(); 
     }
 }
@@ -77,5 +90,17 @@ function branch(len, depth, spread){
     rotate(-spread);
     branch(len*1.2, depth - 1, spread);
     pop();
+}
+
+function mouseClicked(){
+    savedTrees.push({
+        armLength: armLength,
+        spread: spread
+    })
+
+    // limit array
+    if(savedTrees.length >3){
+        savedTrees.shift();
+    }
 }
 
