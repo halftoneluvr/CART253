@@ -7,13 +7,13 @@
 
 "use strict";
 
-let objects = [];
+let objects =[];
 
-let hue = undefined;
-let sat = undefined;
-let light = undefined; 
+let hue = 0;
+let sat = 0;
+let light = 0; 
 
-let object={
+let object ={
     x: undefined,
     y: undefined, 
     fill:{
@@ -34,8 +34,40 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * executes drawing
 */
 function draw() {
 
+    alterValues();
+
+    drawObjects();
+
+    showColour();
+}
+
+function alterValues(){
+    if(keyIsPressed === true){
+        if(key === 'ArrowUp'){
+            sat += 1;
+        } else if(key === 'ArrowDown'){
+            sat -= 1;
+        }
+        if(key === 'ArrowRight'){
+            light += 1; 
+        } else if(key === 'ArrowLeft'){
+            light -= 1; 
+        }
+    }
+}
+
+function drawObjects(){
+
+}
+
+function showColour(){
+    push();
+    fill(hue, sat, light);
+    noStroke();
+    rect(width-35, height-10, 30, 5);
+    pop();
 }
