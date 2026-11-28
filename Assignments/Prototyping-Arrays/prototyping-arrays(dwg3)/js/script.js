@@ -9,6 +9,8 @@
 
 let objects =[];
 
+let showInstructions = true; // Boolean for instructions 
+
 let hue = undefined;
 let sat = 0;
 let light = 0; 
@@ -31,7 +33,11 @@ function setup() {
  * executes drawing
 */
 function draw() {
-     background(245);
+    background(255);
+
+    if(showInstructions){
+        instructionsText();
+    }
 
     alterValues(); // user controls stroke value 
 
@@ -90,4 +96,18 @@ function mouseReleased(){
             l: light
         }
     });
+
+    showInstructions = false; 
+}
+
+function instructionsText(){
+    push();
+    fill(0);
+    noStroke();
+    textSize(12);
+    textFont("Times New Roman");
+    textStyle(NORMAL);
+    textAlign(CENTER, CENTER);
+    text("use arrow keys to adjust saturation & lightness", width/2, height/2);
+    pop(); 
 }
