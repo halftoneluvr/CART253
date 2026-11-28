@@ -104,8 +104,8 @@ function instructionsText(){
     push();
     fill(0);
     noStroke();
-    textSize(12);
-    textFont("Times New Roman");
+    textSize(10);
+    textFont("Arial");
     textStyle(NORMAL);
     textAlign(CENTER, CENTER);
     text("use arrow keys to adjust saturation & lightness", width/2, height/2);
