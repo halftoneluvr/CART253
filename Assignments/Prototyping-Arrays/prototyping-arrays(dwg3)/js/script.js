@@ -13,21 +13,15 @@ let hue = 0;
 let sat = 0;
 let light = 0; 
 
-let object ={
-    x: undefined,
-    y: undefined, 
-    fill:{
-        h: hue,
-        s: sat,
-        l: light
-    }
-}
+let minRadius = 5; 
+let maxRadius = 150;
+let density = 3; 
 
 
 function setup() {
     createCanvas(225, 225);
     background(245);
-
+    noFill();
     colorMode(HSL); // adjusts for use 
 
 }
@@ -37,31 +31,41 @@ function setup() {
  * executes drawing
 */
 function draw() {
+     background(245);
 
-    alterValues();
+    alterValues(); // user controls stroke value 
 
-    drawObjects();
+    drawObjects(); // creates objects 
 
-    showColour();
+    showColour(); // shows active colour value 
 }
 
 function alterValues(){
     if(keyIsPressed === true){
         if(key === 'ArrowUp'){
-            sat += 1;
+            sat = constrain(sat + 1, 0, 100);
         } else if(key === 'ArrowDown'){
-            sat -= 1;
+            sat = constrain(sat - 1, 0, 100);
         }
         if(key === 'ArrowRight'){
-            light += 1; 
+            light = constrain(light + 1, 0, 100);
         } else if(key === 'ArrowLeft'){
-            light -= 1; 
+            light = constrain(light - 1, 0, 100);
         }
     }
 }
 
 function drawObjects(){
-
+    for(const obj of objects){
+        push();
+        noFill();
+        strokeWeight(0.25);
+        stroke(obj.fill.h, obj.fill.s, obj.fill.l);
+        for(let i = 0; i < obj.r; i += density){
+            ellipse(obj.x, obj.y, i);
+        }
+        pop(); 
+    }
 }
 
 function showColour(){
@@ -70,4 +74,19 @@ function showColour(){
     noStroke();
     rect(width-35, height-10, 30, 5);
     pop();
+}
+
+function mouseReleased(){
+    if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height) return;
+    
+    objects.push({
+        x: mouseX,
+        y: mouseY,
+        r: random(minRadius, maxRadius),
+        fill: {
+            h: hue,
+            s: sat,
+            l: light
+        }
+    });
 }
