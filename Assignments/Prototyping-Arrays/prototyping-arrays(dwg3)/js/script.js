@@ -9,13 +9,13 @@
 
 let objects =[];
 
-let hue = 0;
+let hue = undefined;
 let sat = 0;
 let light = 0; 
 
 let minRadius = 5; 
-let maxRadius = 150;
-let density = 3; 
+let maxRadius = 200;
+let density = 3;
 
 
 function setup() {
@@ -53,13 +53,14 @@ function alterValues(){
             light = constrain(light - 1, 0, 100);
         }
     }
+    hue = random([180, 300, 60]);
 }
 
 function drawObjects(){
     for(const obj of objects){
         push();
         noFill();
-        strokeWeight(0.25);
+        strokeWeight(0.5);
         stroke(obj.fill.h, obj.fill.s, obj.fill.l);
         for(let i = 0; i < obj.r; i += density){
             ellipse(obj.x, obj.y, i);
