@@ -2,16 +2,33 @@
  * Prototyping Arrays Drawing 3
  * Owen Dobson
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Building a simple drawing tool
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+let objects = [];
+
+let hue = undefined;
+let sat = undefined;
+let light = undefined; 
+
+let object={
+    x: undefined,
+    y: undefined, 
+    fill:{
+        h: hue,
+        s: sat,
+        l: light
+    }
+}
+
+
 function setup() {
+    createCanvas(225, 225);
+    background(245);
+
+    colorMode(HSL); // adjusts for use 
 
 }
 
